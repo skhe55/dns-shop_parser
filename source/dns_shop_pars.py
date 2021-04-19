@@ -129,10 +129,10 @@ class DnsShopParser(object):
         df['Цена товара'] = price_product
         df['Ссылка на товар'] = links_product
 
-        writer = pd.ExcelWriter(name_ctg + '_product.xlsx', engine='xlsxwriter')
+        writer = pd.ExcelWriter(name_ctg + '_data.xlsx', engine='xlsxwriter')
         df.to_excel(writer, sheet_name='Page1', index=False)
 
-        writer.sheets['Page1'].set_column('A:A', 30)
+        writer.sheets['Page1'].set_column('A:A', 120)
         writer.sheets['Page1'].set_column('B:B', 30)
         writer.sheets['Page1'].set_column('C:C', 110)
         writer.save()
