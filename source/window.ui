@@ -10,8 +10,24 @@
     <height>533</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>DNS PARSER</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resource/icons8-triller-app-48.png</normaloff>../resource/icons8-triller-app-48.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>48</width>
+    <height>48</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -93,14 +109,31 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../resource/backgroundimage.jpg</pixmap>
+     <pixmap>../resource/pastel-purple-and-yellow-background.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
     <property name="wordWrap">
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="SortByPriceBtn">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sort by price</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>gridLayoutWidget</zorder>
+   <zorder>SortByPriceBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

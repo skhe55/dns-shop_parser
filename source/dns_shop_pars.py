@@ -76,7 +76,7 @@ class DnsShopParser(object):
 
         return index_list    
     
-    def makeHyperLink(text:str, link:str):
+    def makeHyperLink(self, text:str, link:str):
         return '=HYPERLINK("%s", "%s")'%(link, text)
 
     def print_average_price_prod(self, price_list:list, name_prod_list:list, link_prod_list:list, index_list:list):
@@ -96,7 +96,6 @@ class DnsShopParser(object):
 
     def print_all_prod(self, price_list:list, name_prod_list:list, link_prod_list:list):
         d = list()
-
         for i in range(len(name_prod_list)):
             d.append({
                 "Название товара": name_prod_list[i],
