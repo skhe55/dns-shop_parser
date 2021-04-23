@@ -7,35 +7,24 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 options.add_experimental_option("excludeSwitches", ["enable-logging"])
 
-class getDataThreadProc(QtCore.QThread):
-    def __init__(self, request):
-        QtCore.QThread.__init__(self)
-        self.ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
-        self.driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
-        self.request = request
-
-    def __del__(self):
-        self.wait()
-
-    def run(self):
+class getData(QtCore.QObject):
+    finished = QtCore.pyqtSignal()
+    finished_1 = QtCore.pyqtSignal()
+    finished_2 = QtCore.pyqtSignal()
+    ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
+    driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
+    request = str()
+    data_about_proc = list()
+    def run_parsing_proc(self):
         processors = DnsShopParser(self.driver, self.request, self.ignored_exceptions)
         price, name, link = processors.parse()
-        data_about_proc = processors.print_all_prod(price, name, link)
-        upload_to_xlsx_file(data_about_proc, "Processors")
-        upload_to_csv_file(data_about_proc, "Processors")
-        upload_to_json_file(data_about_proc, "Processors")
+        self.data_about_proc = processors.print_all_prod(price, name, link)
+        upload_to_xlsx_file(self.data_about_proc, "Processors")
+        upload_to_csv_file(self.data_about_proc, "Processors")
+        upload_to_json_file(self.data_about_proc, "Processors")
+        self.finished.emit()   
 
-class getDataThreadVideocard(QtCore.QThread):
-    def __init__(self, request):
-        QtCore.QThread.__init__(self)
-        self.ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
-        self.driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
-        self.request = request
-
-    def __del__(self):
-        self.wait()
-
-    def run(self):
+    def run_parsing_gpu(self):
         videocards = DnsShopParser(self.driver, self.request, self.ignored_exceptions)
         price, name, link = videocards.parse()
         print(price)
@@ -43,21 +32,16 @@ class getDataThreadVideocard(QtCore.QThread):
         upload_to_xlsx_file(data_about_gp, "Videocards")
         upload_to_csv_file(data_about_gp, "Videocards")
         upload_to_json_file(data_about_gp, "Videocards")
+        self.finished_1.emit()
 
-class getDataThreadRAM(QtCore.QThread):         
-    def __init__(self, request):
-        QtCore.QThread.__init__(self)
-        self.ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
-        self.driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
-        self.request = request
-
-    def __del__(self):
-        self.wait()
-
-    def run(self):
+    def run_parsing_ram(self):
         ram = DnsShopParser(self.driver, self.request, self.ignored_exceptions)
         price, name, link = ram.parse()
         data_about_ram = ram.print_all_prod(price, name, link)
         upload_to_xlsx_file(data_about_ram, "ram_dimm")
         upload_to_csv_file(data_about_ram, "ram_dimm")
-        upload_to_json_file(data_about_ram, "ram_dimm")    
+        upload_to_json_file(data_about_ram, "ram_dimm")
+        self.finished_2.emit()              
+
+    def _return_data_(self, data_about_prod:list):
+        return data_about_prod    
