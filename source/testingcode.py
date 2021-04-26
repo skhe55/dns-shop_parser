@@ -164,4 +164,10 @@ if __name__ == "__main__":
     # d1 = p.open_data('data2.picle')
     # print(d)
     # print(d1)
+<<<<<<< HEAD
     print(" %s seconds " % (time.time() - start_time))
+=======
+    print(" %s seconds " % (time.time() - start_time))
+
+
+>>>>>>> master

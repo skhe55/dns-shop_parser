@@ -10,35 +10,38 @@ import pandas as pd
 import xlsxwriter
 
 class DnsShopParser(object):
-    def __init__(self, driver, req):
+    def __init__(self, driver, req, ignored_exceptions):
         self.driver = driver
         self.req = req
+        self.ignored_exceptions = ignored_exceptions
 
     def parse(self):
-        driver.maximize_window()
-        driver.get(self.req)
+        self.driver.maximize_window()
+        self.driver.get(self.req)
         list_name = list()
         list_price = list()
         list_link = list()
         while True:
-            next_page_btn = driver.find_elements(By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_next ']")
-
-            time.sleep(14)
-            title_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']/span[1]")
-            for item in title_prod_list:
-                list_name.append(item.text) 
-
-            link_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']")
-            for item in link_prod_list:
-                list_link.append(item.get_attribute("href"))
-
-            price_prod_list = driver.find_elements(By.XPATH, "//div[@class='product-buy__price']")
-            for item in price_prod_list:
-                list_price.append(item.text)
-                
             try:
-                WebDriverWait(driver, 10, ignored_exceptions=ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_next ']"))).click() 
-            except Exception:
+                time.sleep(5)
+                title_prod_list = self.driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']/span[1]")
+                for item in title_prod_list:
+                    list_name.append(item.text) 
+
+                link_prod_list = self.driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']")
+                for item in link_prod_list:
+                    list_link.append(item.get_attribute("href"))
+
+                price_prod_list = self.driver.find_elements(By.XPATH, "//div[@class='product-buy__price']")
+                for item in price_prod_list:
+                    list_price.append(item.text)
+   
+                self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(3)
+                WebDriverWait(self.driver, 5, ignored_exceptions=self.ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_next ']"))).click()
+                
+            except Exception as ex:
+                print(ex)
                 break
 
         return list_price, list_name, list_link    
@@ -73,7 +76,7 @@ class DnsShopParser(object):
 
         return index_list    
     
-    def makeHyperLink(text:str, link:str):
+    def makeHyperLink(self, text:str, link:str):
         return '=HYPERLINK("%s", "%s")'%(link, text)
 
     def print_average_price_prod(self, price_list:list, name_prod_list:list, link_prod_list:list, index_list:list):
@@ -93,7 +96,6 @@ class DnsShopParser(object):
 
     def print_all_prod(self, price_list:list, name_prod_list:list, link_prod_list:list):
         d = list()
-
         for i in range(len(name_prod_list)):
             d.append({
                 "Название товара": name_prod_list[i],
@@ -103,53 +105,4 @@ class DnsShopParser(object):
 
         return d
 
-    def upload_to_csv_file(self, d:list, name_ctg:str):
-        try:
-            with open(name_ctg + "_data.csv", mode="w") as w_file:
-                names = ['Название товара', 'Цена товара', 'Ссылка на товар']
-                file_writer = csv.DictWriter(w_file, delimiter = ",", lineterminator="\r", fieldnames=names)
-                file_writer.writeheader()
-                file_writer.writerows(d)
-        except Exception:
-            return 'create csv file failed'
-
-    def upload_to_xlsx_file(self, d:list, name_ctg:str):
-        name_product = list()
-        price_product = list()
-        links_product = list()
-
-        for i in range(len(d)):
-            name_product.append(d[i].get('Название товара'))
-            price_product.append(d[i].get('Цена товара'))
-            links_product.append(d[i].get('Ссылка на товар'))
-
-        df = pd.DataFrame()
-        
-        df['Название товара'] = name_product
-        df['Цена товара'] = price_product
-        df['Ссылка на товар'] = links_product
-
-        writer = pd.ExcelWriter(name_ctg + '_product.xlsx', engine='xlsxwriter')
-        df.to_excel(writer, sheet_name='Page1', index=False)
-
-        writer.sheets['Page1'].set_column('A:A', 30)
-        writer.sheets['Page1'].set_column('B:B', 30)
-        writer.sheets['Page1'].set_column('C:C', 110)
-        writer.save()
-
-
-
-
-if __name__ == "__main__":
-    list_get_requests = ["https://www.dns-shop.ru/catalog/17a89aab16404e77/videokarty/", "https://www.dns-shop.ru/catalog/17a899cd16404e77/processory/"]
-    options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
-    driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
-    dns_pars = DnsShopParser(driver, list_get_requests[0])
-    price, name, link = dns_pars.parse()
-    index = dns_pars.average_price_pool(price, 3099, 5000)
-    d = dns_pars.print_average_price_prod(price, name, link, index)
-    dns_pars.upload_to_xlsx_file(d, "Videocard")
    
