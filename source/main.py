@@ -3,6 +3,7 @@ from window import Ui_MainWindow
 from interface_sort_by_price import Ui_Dialog
 from getDataThread import getData
 from save_func_diff_format import open_data
+from dns_shop_pars import DnsShopParser
 import time
 import sys
 import itertools
@@ -39,39 +40,51 @@ class ViewMode(QtWidgets.QDialog):
         list_bck = open_data(dir[:-6] + 'data/' + 'data2Proc.picle')
         list_bck = list(reversed(list_bck))
         self.data_proccesors = list(itertools.chain(list_frwrd, list_bck))
+        _pars_obj = DnsShopParser()
+        _min_border = int(self.ui.lineEdit.text())
+        _max_border = int(self.ui.lineEdit_2.text())
+        indx_list = _pars_obj.avg_price(self.data_proccesors, _min_border, _max_border)
         self.ui.tableWidget.setColumnCount(3)
-        self.ui.tableWidget.setRowCount(len(self.data_proccesors) + 1) 
+        self.ui.tableWidget.setRowCount(len(indx_list) + 1) 
         header = self.ui.tableWidget.horizontalHeader()
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
         header.setDefaultSectionSize(365)
         self.ui.tableWidget.setItem(0,0, QtWidgets.QTableWidgetItem("Название товара"))
         self.ui.tableWidget.setItem(0,1, QtWidgets.QTableWidgetItem("Цена товара"))
         self.ui.tableWidget.setItem(0,2, QtWidgets.QTableWidgetItem("Ссылка на товар"))
-        print(len(self.data_proccesors))
-        for i in range(len(self.data_proccesors)):
-            self.ui.tableWidget.setItem(i + 1, 0, QtWidgets.QTableWidgetItem(self.data_proccesors[i].get("Название товара")))
-            self.ui.tableWidget.setItem(i + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_proccesors[i].get("Цена товара"))))
-            self.ui.tableWidget.setItem(i + 1, 2, QtWidgets.QTableWidgetItem(self.data_proccesors[i].get("Ссылка на товар")))
-
+        self.ui.label_3.setText('Всего товаров:' + str(len(indx_list)))
+        count = 0
+        for i in indx_list:
+            self.ui.tableWidget.setItem(count + 1, 0, QtWidgets.QTableWidgetItem(self.data_proccesors[i].get("Название товара")))
+            self.ui.tableWidget.setItem(count + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_proccesors[i].get("Цена товара"))))
+            self.ui.tableWidget.setItem(count + 1, 2, QtWidgets.QTableWidgetItem(self.data_proccesors[i].get("Ссылка на товар")))
+            count += 1
+        
     def build_table_gpu(self):
         dir = os.path.abspath(os.curdir)
         list_frwrd = open_data(dir[:-6] + 'data/' + 'data1Gpu.picle')
         list_bck = open_data(dir[:-6] + 'data/' + 'data2Gpu.picle')
         list_bck = list(reversed(list_bck))
         self.data_gpu = list(itertools.chain(list_frwrd, list_bck))
+        _pars_obj = DnsShopParser()
+        _min_border = int(self.ui.lineEdit.text())
+        _max_border = int(self.ui.lineEdit_2.text())
+        indx_list = _pars_obj.avg_price(self.data_gpu, _min_border, _max_border)
         self.ui.tableWidget.setColumnCount(3)
-        self.ui.tableWidget.setRowCount(len(self.data_gpu) + 1) 
+        self.ui.tableWidget.setRowCount(len(indx_list) + 1) 
         header = self.ui.tableWidget.horizontalHeader()
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
         header.setDefaultSectionSize(365)
         self.ui.tableWidget.setItem(0,0, QtWidgets.QTableWidgetItem("Название товара"))
         self.ui.tableWidget.setItem(0,1, QtWidgets.QTableWidgetItem("Цена товара"))
         self.ui.tableWidget.setItem(0,2, QtWidgets.QTableWidgetItem("Ссылка на товар"))
-        print(len(self.data_gpu))
-        for i in range(len(self.data_gpu)):
-            self.ui.tableWidget.setItem(i + 1, 0, QtWidgets.QTableWidgetItem(self.data_gpu[i].get("Название товара")))
-            self.ui.tableWidget.setItem(i + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_gpu[i].get("Цена товара"))))
-            self.ui.tableWidget.setItem(i + 1, 2, QtWidgets.QTableWidgetItem(self.data_gpu[i].get("Ссылка на товар")))
+        self.ui.label_3.setText('Всего товаров:' + str(len(indx_list)))
+        count = 0
+        for i in indx_list:
+            self.ui.tableWidget.setItem(count + 1, 0, QtWidgets.QTableWidgetItem(self.data_gpu[i].get("Название товара")))
+            self.ui.tableWidget.setItem(count + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_gpu[i].get("Цена товара"))))
+            self.ui.tableWidget.setItem(count + 1, 2, QtWidgets.QTableWidgetItem(self.data_gpu[i].get("Ссылка на товар")))
+            count += 1
 
     def build_table_ram(self):
         dir = os.path.abspath(os.curdir)
@@ -79,19 +92,25 @@ class ViewMode(QtWidgets.QDialog):
         list_bck = open_data(dir[:-6] + 'data/' + 'data2Ram.picle')
         list_bck = list(reversed(list_bck))
         self.data_ram = list(itertools.chain(list_frwrd, list_bck))
+        _pars_obj = DnsShopParser()
+        _min_border = int(self.ui.lineEdit.text())
+        _max_border = int(self.ui.lineEdit_2.text())
+        indx_list = _pars_obj.avg_price(self.data_ram, _min_border, _max_border)
         self.ui.tableWidget.setColumnCount(3)
-        self.ui.tableWidget.setRowCount(len(self.data_ram) + 1) 
+        self.ui.tableWidget.setRowCount(len(indx_list) + 1) 
         header = self.ui.tableWidget.horizontalHeader()
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
         header.setDefaultSectionSize(365)
         self.ui.tableWidget.setItem(0,0, QtWidgets.QTableWidgetItem("Название товара"))
         self.ui.tableWidget.setItem(0,1, QtWidgets.QTableWidgetItem("Цена товара"))
         self.ui.tableWidget.setItem(0,2, QtWidgets.QTableWidgetItem("Ссылка на товар"))
-        print(len(self.data_ram))
-        for i in range(len(self.data_ram)):
-            self.ui.tableWidget.setItem(i + 1, 0, QtWidgets.QTableWidgetItem(self.data_ram[i].get("Название товара")))
-            self.ui.tableWidget.setItem(i + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_ram[i].get("Цена товара"))))
-            self.ui.tableWidget.setItem(i + 1, 2, QtWidgets.QTableWidgetItem(self.data_ram[i].get("Ссылка на товар")))
+        self.ui.label_3.setText('Всего товаров:' + str(len(indx_list)))
+        count = 0
+        for i in indx_list:
+            self.ui.tableWidget.setItem(count + 1, 0, QtWidgets.QTableWidgetItem(self.data_ram[i].get("Название товара")))
+            self.ui.tableWidget.setItem(count + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_ram[i].get("Цена товара"))))
+            self.ui.tableWidget.setItem(count + 1, 2, QtWidgets.QTableWidgetItem(self.data_ram[i].get("Ссылка на товар")))
+            count += 1
 
 class interface_window(QtWidgets.QMainWindow):
     def __init__(self):
