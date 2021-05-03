@@ -15,6 +15,14 @@ ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 options.add_experimental_option("excludeSwitches", ["enable-logging"])
+list_of_manufacturers = ['AMD', 'Intel', 'Asrock', 'ASUS', 'GIGABYTE',
+                         'Inno3D', 'KFA2', 'MSI', 'Palit', 'PNY', 'PowerColor'
+                         'Sapphire', 'Zotac', 'A-Data', 'AMD Radeon', 'Apacer',
+                         'Corsair', 'Crucial', 'Crucial Ballistix', 'Dell',
+                         'G.Skill', 'Goodram', 'HP', 'Hynix', 'HyperX', 'JRam',
+                         'Kingston', 'Lenovo', 'Micron', 'Neo Forza', 
+                         'Patriot Memory', 'QUMO', 'Samsung', 'Silicon Power',
+                         'Team Group', 'Thermaltake', 'Transcend']
 
 class DnsShopParser(object):
     def forward_parse(self, number_pgs, req, _class_prod):
@@ -137,34 +145,14 @@ class DnsShopParser(object):
             pickle.dump(d, f)
 
 
-    #def average_price_pool(self, d:list, minimum_border:int, maximum_border:int):
-        # temp_list = list()
-        # result_list = list()
-        # index_list = list()
-
-        # for s in price_list:
-        #     temp = s.replace(' ', '')
-        #     temp = temp.replace('₽', '')
-        #     temp = temp.replace('\n', '/')
-        #     temp_list.append(temp)
-        #     temp = ''
-
-        # price_list.clear()
-
-        # for item in temp_list:
-        #     try:
-        #         price_list.append(int(item))
-        #     except ValueError:
-        #         price_list.append(int(item[:item.find('/')]))
-
-        # for i in range(len(price_list)):
-        #     if price_list[i] >= minimum_border and price_list[i] <= maximum_border:
-        #         result_list.append(price_list[i])
-        #         index_list.append(i)
-        #     else:
-        #         continue
-
-        # return index_list    
+    def avg_price(self, d:list, min_border:int, max_border:int):
+        index_list = list()
+        for i in range(len(d)):
+            if d[i].get("Цена товара") >= min_border and d[i].get("Цена товара") <= max_border:
+                index_list.append(i)
+            else:
+                continue    
+        return index_list  
     
     def makeHyperLink(self, text:str, link:str):
         return '=HYPERLINK("%s", "%s")'%(link, text)
