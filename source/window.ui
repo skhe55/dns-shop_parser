@@ -12,9 +12,24 @@
   </property>
   <property name="sizePolicy">
    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
    </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>429</width>
+    <height>533</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>429</width>
+    <height>533</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>CrossCursor</cursorShape>
   </property>
   <property name="windowTitle">
    <string>DNS PARSER</string>
@@ -23,6 +38,18 @@
    <iconset>
     <normaloff>../resource/icons8-triller-app-48.png</normaloff>../resource/icons8-triller-app-48.png</iconset>
   </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 5px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}</string>
+  </property>
   <property name="iconSize">
    <size>
     <width>48</width>
@@ -30,35 +57,73 @@
    </size>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QPushButton" name="ViewModeBtn">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>220</y>
-      <width>125</width>
-      <height>266</height>
+      <x>340</x>
+      <y>10</y>
+      <width>81</width>
+      <height>41</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../resource/icons8-video-card-64.png</normaloff>../resource/icons8-video-card-64.png</iconset>
-       </property>
-       <property name="iconSize">
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>View Product</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>400</y>
+      <width>254</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="minimumSize">
         <size>
-         <width>64</width>
+         <width>68</width>
          <height>64</height>
         </size>
        </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton">
+       <property name="maximumSize">
+        <size>
+         <width>68</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(254, 249, 217);
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -74,8 +139,88 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="minimumSize">
+        <size>
+         <width>68</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>68</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(254, 249, 217);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../resource/icons8-video-card-64.png</normaloff>../resource/icons8-video-card-64.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton_3">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>68</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>68</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(254, 249, 217);
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -86,54 +231,55 @@
        <property name="iconSize">
         <size>
          <width>100</width>
-         <height>100</height>
+         <height>70</height>
         </size>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>-10</x>
-      <y>-30</y>
-      <width>631</width>
-      <height>611</height>
+      <x>0</x>
+      <y>0</y>
+      <width>431</width>
+      <height>261</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(106, 200, 104);</string>
     </property>
-    <property name="pixmap">
-     <pixmap>../resource/pastel-purple-and-yellow-background.jpg</pixmap>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-    <property name="wordWrap">
-     <bool>false</bool>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="SortByPriceBtn">
+   <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>10</y>
-      <width>75</width>
-      <height>23</height>
+      <x>0</x>
+      <y>260</y>
+      <width>431</width>
+      <height>261</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Sort by price</string>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(199, 200, 188);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <zorder>label</zorder>
-   <zorder>gridLayoutWidget</zorder>
-   <zorder>SortByPriceBtn</zorder>
+   <zorder>frame</zorder>
+   <zorder>frame_2</zorder>
+   <zorder>ViewModeBtn</zorder>
+   <zorder>horizontalLayoutWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

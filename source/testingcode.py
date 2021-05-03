@@ -7,6 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from multiprocessing import Process, Pipe 
 import pickle
+from save_func_diff_format import upload_to_json_file
+import itertools
 start_time = time.time()
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
@@ -25,7 +27,7 @@ class Parsing(object):
         driver.get(req)
         try:
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(2.4)
+            time.sleep(2.5)
             WebDriverWait(driver, 0, ignored_exceptions=self.ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_last ']"))).click()
             url = self.get_url(driver)
         except Exception as ex:
@@ -86,15 +88,15 @@ class Parsing(object):
                 title_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']/span[1]")
                 for item in title_prod_list:
                     list_name.append(item.text) 
-
+                
                 link_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']")
                 for item in link_prod_list:
                     list_link.append(item.get_attribute("href"))
-
+                
                 price_prod_list = driver.find_elements(By.XPATH, "//div[@class='product-buy__price']")
                 for item in price_prod_list:
                     list_price.append(item.text)
-   
+                
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                 time.sleep(3)
                 WebDriverWait(driver, 0, ignored_exceptions=self.ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_next ']"))).click()
@@ -103,7 +105,7 @@ class Parsing(object):
                 #break
         driver.quit()
         self.save_data(list_name, list_price, list_link, "1")
-        print("1: \n", len(list_price), "### ", number_pgs)
+        print("1: \n", "### ", number_pgs)
 
     def back_parse(self, number_pgs, req):
         number_pgs = number_pgs / 2
@@ -119,26 +121,26 @@ class Parsing(object):
             try:
                 time.sleep(5)
                 title_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']/span[1]")
-                for item in title_prod_list:
+                for item in title_prod_list[::-1]:
                     list_name.append(item.text) 
-
+                
                 link_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']")
-                for item in link_prod_list:
+                for item in link_prod_list[::-1]:
                     list_link.append(item.get_attribute("href"))
-
+                
                 price_prod_list = driver.find_elements(By.XPATH, "//div[@class='product-buy__price']")
-                for item in price_prod_list:
+                for item in price_prod_list[::-1]:
                     list_price.append(item.text)
-   
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                 time.sleep(3)
                 WebDriverWait(driver, 0, ignored_exceptions=self.ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_prev ']"))).click()
             except Exception as ex:
                 print(ex)
                 #break
-        driver.quit()        
+        driver.quit()
+  
         self.save_data(list_name, list_price, list_link, "2")
-        print("2: \n", len(list_price))
+        print("2: \n",  list_price)
 
 # 25.004719257354736 seconds #
 # 5 pages -  59.72163772583008 seconds #
@@ -147,27 +149,24 @@ class Parsing(object):
 # 47 pages - 4.04 minutes #
 if __name__ == "__main__":
     ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
-    list_get_requests = [        
-            "https://www.dns-shop.ru/catalog/17a89aab16404e77/videokarty/", 
-            "https://www.dns-shop.ru/catalog/17a899cd16404e77/processory/",
-            "https://www.dns-shop.ru/catalog/17a89a3916404e77/operativnaya-pamyat-dimm/"
-        ]
-    pars = Parsing(ignored_exceptions)
-    url = pars.get_count_pages(list_get_requests[0])
-    page = url[-2:].replace('=', '')
-    process_1 = Process(target=pars.forward_parse, args=(int(page), list_get_requests[0],)) 
-    process_1.start()
-    process_2 = Process(target=pars.back_parse, args=(int(page), url,))
-    process_2.start()
-    # p = Parsing(ignored_exceptions)
-    # d = p.open_data('data1.picle')
-    # d1 = p.open_data('data2.picle')
-    # print(d)
-    # print(d1)
-<<<<<<< HEAD
-    print(" %s seconds " % (time.time() - start_time))
-=======
-    print(" %s seconds " % (time.time() - start_time))
+    # list_get_requests = [        
+    #         "https://www.dns-shop.ru/catalog/17a89aab16404e77/videokarty/", 
+    #         "https://www.dns-shop.ru/catalog/17a899cd16404e77/processory/",
+    #         "https://www.dns-shop.ru/catalog/17a89a3916404e77/operativnaya-pamyat-dimm/"
+    #     ]
+    # pars = Parsing(ignored_exceptions)
+    # url = pars.get_count_pages(list_get_requests[0])
+    # page = url[-2:].replace('=', '')
+    # process_1 = Process(target=pars.forward_parse, args=(int(page), list_get_requests[0],)) 
+    # process_1.start()
+    # process_2 = Process(target=pars.back_parse, args=(int(page), url,))
+    # process_2.start()
+    p = Parsing(ignored_exceptions)
+    d = p.open_data('data1.picle')
+    d1 = p.open_data('data2.picle')
+    d1 = list(reversed(d1))
+    data = list(itertools.chain(d, d1))
+    upload_to_json_file(data, 'video')
 
+    
 
->>>>>>> master

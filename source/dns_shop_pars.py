@@ -8,50 +8,104 @@ import time
 import csv
 import pandas as pd
 import xlsxwriter
+import pickle
+import os.path
+
+ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
+options = webdriver.ChromeOptions()
+options.add_argument("--headless")
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
 
 class DnsShopParser(object):
-    def __init__(self, driver, req, ignored_exceptions):
-        self.driver = driver
-        self.req = req
-        self.ignored_exceptions = ignored_exceptions
-
-    def parse(self):
-        self.driver.maximize_window()
-        self.driver.get(self.req)
+    def forward_parse(self, number_pgs, req, _class_prod):
+        number_pgs = number_pgs / 2
+        if type(number_pgs) == float:
+            number_pgs = round(number_pgs) + 1
+        driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
+        driver.maximize_window()
+        driver.get(req)
         list_name = list()
         list_price = list()
         list_link = list()
-        while True:
+        for i in range(number_pgs):
             try:
                 time.sleep(5)
-                title_prod_list = self.driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']/span[1]")
+                title_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']/span[1]")
                 for item in title_prod_list:
                     list_name.append(item.text) 
 
-                link_prod_list = self.driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']")
+                link_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']")
                 for item in link_prod_list:
                     list_link.append(item.get_attribute("href"))
 
-                price_prod_list = self.driver.find_elements(By.XPATH, "//div[@class='product-buy__price']")
+                price_prod_list = driver.find_elements(By.XPATH, "//div[@class='product-buy__price']")
                 for item in price_prod_list:
                     list_price.append(item.text)
    
-                self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                 time.sleep(3)
-                WebDriverWait(self.driver, 5, ignored_exceptions=self.ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_next ']"))).click()
-                
+                WebDriverWait(driver, 0, ignored_exceptions=ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_next ']"))).click()
             except Exception as ex:
                 print(ex)
-                break
+        driver.quit()
+        self.save_data(list_name, list_price, list_link, "1", _class_prod)
+        print("1: \n", len(list_price), "### ", number_pgs)
 
-        return list_price, list_name, list_link    
-         
+    def back_parse(self, number_pgs, req, _class_prod):
+        number_pgs = number_pgs / 2
+        if type(number_pgs) == float:
+            number_pgs = round(number_pgs)
+        driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
+        driver.maximize_window()
+        driver.get(req)
+        list_name = list()
+        list_price = list()
+        list_link = list()
+        for i in range(number_pgs):
+            try:
+                time.sleep(5)
+                title_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']/span[1]")
+                for item in title_prod_list[::-1]:
+                    list_name.append(item.text) 
+                
+                link_prod_list = driver.find_elements(By.XPATH, "//a[@class='catalog-product__name ui-link ui-link_black']")
+                for item in link_prod_list[::-1]:
+                    list_link.append(item.get_attribute("href"))
+                
+                price_prod_list = driver.find_elements(By.XPATH, "//div[@class='product-buy__price']")
+                for item in price_prod_list[::-1]:
+                    list_price.append(item.text)
 
-    def average_price_pool(self, price_list:list, minimum_border:int, maximum_border:int):
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(3)
+                WebDriverWait(driver, 0, ignored_exceptions=ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_prev ']"))).click()
+            except Exception as ex:
+                print(ex)
+        driver.quit()
+        self.save_data(list_name, list_price, list_link, "2", _class_prod)
+        print("2: \n", list_price)
+
+    def get_url(self, driver):
+        return driver.current_url
+
+    def get_count_pages(self, req):
+        driver = webdriver.Chrome(options=options, executable_path="chromedriver.exe")
+        driver.maximize_window()
+        driver.get(req)
+        try:
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(2.5)
+            WebDriverWait(driver, 0, ignored_exceptions=ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_last ']"))).click()
+            url = self.get_url(driver)
+        except Exception as ex:
+            print(ex)
+        finally:
+            driver.quit()    
+        return url
+
+    def _conversion_to_(self, name_prod_list, price_list, link_prod_list):
         temp_list = list()
-        result_list = list()
-        index_list = list()
-
+        d = list()
         for s in price_list:
             temp = s.replace(' ', '')
             temp = temp.replace('₽', '')
@@ -67,14 +121,50 @@ class DnsShopParser(object):
             except ValueError:
                 price_list.append(int(item[:item.find('/')]))
 
-        for i in range(len(price_list)):
-            if price_list[i] >= minimum_border and price_list[i] <= maximum_border:
-                result_list.append(price_list[i])
-                index_list.append(i)
-            else:
-                continue
+        for i in range(len(name_prod_list)):
+            d.append({
+                "Название товара": name_prod_list[i],
+                "Цена товара": price_list[i],
+                "Ссылка на товар": link_prod_list[i]
+            }) 
+        return d 
 
-        return index_list    
+    
+    def save_data(self, name_prod_list, price_list, link_prod_list, num:str, _class_prod):
+        d = self._conversion_to_(name_prod_list, price_list, link_prod_list)
+        dir = os.path.abspath(os.curdir)
+        with open(dir[:-6] + 'data/' + 'data' + num + _class_prod + '.picle', 'wb') as f:
+            pickle.dump(d, f)
+
+
+    #def average_price_pool(self, d:list, minimum_border:int, maximum_border:int):
+        # temp_list = list()
+        # result_list = list()
+        # index_list = list()
+
+        # for s in price_list:
+        #     temp = s.replace(' ', '')
+        #     temp = temp.replace('₽', '')
+        #     temp = temp.replace('\n', '/')
+        #     temp_list.append(temp)
+        #     temp = ''
+
+        # price_list.clear()
+
+        # for item in temp_list:
+        #     try:
+        #         price_list.append(int(item))
+        #     except ValueError:
+        #         price_list.append(int(item[:item.find('/')]))
+
+        # for i in range(len(price_list)):
+        #     if price_list[i] >= minimum_border and price_list[i] <= maximum_border:
+        #         result_list.append(price_list[i])
+        #         index_list.append(i)
+        #     else:
+        #         continue
+
+        # return index_list    
     
     def makeHyperLink(self, text:str, link:str):
         return '=HYPERLINK("%s", "%s")'%(link, text)
@@ -93,16 +183,5 @@ class DnsShopParser(object):
                 continue
 
         return d 
-
-    def print_all_prod(self, price_list:list, name_prod_list:list, link_prod_list:list):
-        d = list()
-        for i in range(len(name_prod_list)):
-            d.append({
-                "Название товара": name_prod_list[i],
-                "Цена товара": price_list[i],
-                "Ссылка на товар": link_prod_list[i]
-            })           
-
-        return d
 
    

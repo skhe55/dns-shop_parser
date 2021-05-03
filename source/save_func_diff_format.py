@@ -3,6 +3,7 @@ import csv
 import pandas as pd
 import xlsxwriter
 import json
+import pickle
 
 def upload_to_json_file(d:list, name_ctg:str):
     with open(name_ctg + "_data.json", "w", encoding="utf-8") as file:
@@ -41,3 +42,8 @@ def upload_to_xlsx_file(d:list, name_ctg:str):
     writer.sheets['Page1'].set_column('B:B', 30)
     writer.sheets['Page1'].set_column('C:C', 110)
     writer.save()
+
+def open_data(path:str):
+        with open(path, 'rb') as f:
+            d = pickle.load(f)
+        return d

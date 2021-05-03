@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>614</width>
-    <height>304</height>
+    <width>884</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -16,16 +16,38 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>884</width>
+    <height>382</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>884</width>
+    <height>382</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>CrossCursor</cursorShape>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>ViewMode</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resource/icons8-triller-app-48.png</normaloff>../resource/icons8-triller-app-48.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string comment="Hi"/>
   </property>
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>80</y>
-     <width>591</width>
-     <height>221</height>
+     <y>100</y>
+     <width>861</width>
+     <height>271</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -34,45 +56,180 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>75</width>
-     <height>23</height>
+     <x>0</x>
+     <y>0</y>
+     <width>891</width>
+     <height>191</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Proccesors</string>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(106, 200, 104);</string>
    </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>10</y>
+      <width>401</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>9</number>
+     </property>
+     <property name="topMargin">
+      <number>9</number>
+     </property>
+     <property name="rightMargin">
+      <number>9</number>
+     </property>
+     <property name="bottomMargin">
+      <number>9</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Videocards</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Proccesors</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>RAM</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QFrame" name="frame_2">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>30</y>
-     <width>75</width>
-     <height>23</height>
+     <x>0</x>
+     <y>190</y>
+     <width>901</width>
+     <height>201</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Videocards</string>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(199, 200, 188);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>30</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>RAM</string>
-   </property>
-  </widget>
+  <zorder>frame_2</zorder>
+  <zorder>frame</zorder>
+  <zorder>gridLayoutWidget</zorder>
  </widget>
  <resources/>
  <connections/>
