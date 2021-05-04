@@ -145,31 +145,47 @@ class DnsShopParser(object):
             pickle.dump(d, f)
 
 
-    def avg_price(self, d:list, min_border:int, max_border:int):
+    def avg_price(self, d:list, min_border:int, max_border:int, text:str):
         index_list = list()
         for i in range(len(d)):
-            if d[i].get("Цена товара") >= min_border and d[i].get("Цена товара") <= max_border:
+            if d[i].get("Цена товара") >= min_border and d[i].get("Цена товара") <= max_border and (text in d[i].get("Название товара")):
                 index_list.append(i)
+            elif d[i].get("Цена товара") >= min_border and d[i].get("Цена товара") <= max_border and (text in 'All'):
+                index_list.append(i)  
             else:
-                continue    
+                continue     
         return index_list  
+
+    def most_manufactures(self, d:list, index_list:list):
+        temp = list()
+        for i in range(len(index_list)):
+            for j in range(len(list_of_manufacturers)):
+                if list_of_manufacturers[j] in d[i].get("Название товара"):
+                    temp.append(list_of_manufacturers[j])
+
+        result = list()
+        for i in range(len(list_of_manufacturers)):
+            result.append(
+                {
+                    list_of_manufacturers[i]:temp.count(list_of_manufacturers[i])
+                }
+            )          
+        return result    
     
-    def makeHyperLink(self, text:str, link:str):
-        return '=HYPERLINK("%s", "%s")'%(link, text)
+    def indexing_list(self, some_list:list):
+        temp = list()
+        for i in range(len(some_list)):
+            temp.append(i)
+        return temp    
 
-    def print_average_price_prod(self, price_list:list, name_prod_list:list, link_prod_list:list, index_list:list):
-        d = list()
-
-        for i in range(len(name_prod_list)):
-            if i in index_list:
-                d.append({
-                    "Название товара": name_prod_list[i],
-                    "Цена товара": price_list[i],
-                    "Ссылка на товар": link_prod_list[i]
-                })
-            else:
-                continue
-
-        return d 
+    def get_symb_of_str(self, text:str):
+        temp = list()
+        try:
+            for i in text:
+                if not i.isdigit():
+                    temp.append(i)
+        except TypeError:
+            temp.append('All') 
+        return ''.join(temp).replace(' ', '')
 
    
