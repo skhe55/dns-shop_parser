@@ -213,7 +213,7 @@ QPushButton:pressed {
       <x>20</x>
       <y>10</y>
       <width>221</width>
-      <height>60</height>
+      <height>65</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
@@ -281,6 +281,16 @@ QLineEdit:focus {
        </property>
        <property name="text">
         <string>999999</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QComboBox" name="comboBox">
+       <property name="cursor">
+        <cursorShape>CrossCursor</cursorShape>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
        </property>
       </widget>
      </item>

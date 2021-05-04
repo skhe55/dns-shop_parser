@@ -17,12 +17,32 @@ def most_manf(d, idx):
         for j in range(len(sd)):
             if sd[j] in d[i].get("Name"):
                 temp.append(sd[j])
-    return temp
+
+    result = list()
+    for i in range(len(sd)):
+        result.append(
+            {
+                sd[i]:temp.count(sd[i])
+            }
+        )          
+    return result
+
+def get_digit_of_str(text:str):
+        temp = list()
+        for i in text:
+            if not i.isdigit():
+                temp.append(i)
+        # text = ''.join(temp).replace(' ', '')        
+        # return text
+        return ''.join(temp).replace(' ', '')
 
 if __name__ == '__main__':
+    # str1 = 'Intel   105'
+    # print(get_digit_of_str(str1))  
+    # print(len(get_digit_of_str(str1)))    
     d = [
         {
-            "Name":"Alison sd56546",
+            "Name":"         Процессор Intel Core i7-9700K BOX [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 95 Вт]",
             "Price": 4535,
             "Link": "asdasd::"
         },
@@ -40,9 +60,20 @@ if __name__ == '__main__':
             "Name":"Alison xXXXXXX546",
             "Price": 4225,
             "Link": "asdasd::"
+        },
+        {
+            "Name":"AMasn 3333sd",
+            "Price": 2000,
+            "Link": "krkr::"
         }
     ]
-    idx = avg_price(d, 5000, 500)
-    temp = most_manf(d, idx)
-    print(idx)
-    print(temp.count('Alison'))
+    # idx = avg_price(d, 5000, 500)
+    # temp = most_manf(d, idx)
+    # print(idx)
+    # print(temp)
+    s = get_digit_of_str("Intel 24")
+    print(len(s))
+    if s in d[0].get("Name"):
+        print("Yes", d[0].get("Name"))
+    else:
+        print("not")    
