@@ -34,16 +34,28 @@ class ViewMode(QtWidgets.QDialog):
         else:
             self.ui.pushButton_3.setEnabled(False)    
 
-    def build_table_proc(self):
+    def build_table_proc(self, _text):
+        self.ui.comboBox.activated[str].connect(self.build_table_proc)
         dir = os.path.abspath(os.curdir)
         list_frwrd = open_data(dir[:-6] + 'data/' + 'data1Proc.picle')
         list_bck = open_data(dir[:-6] + 'data/' + 'data2Proc.picle')
         list_bck = list(reversed(list_bck))
         self.data_proccesors = list(itertools.chain(list_frwrd, list_bck))
         _pars_obj = DnsShopParser()
+        self.ui.comboBox.clear()
         _min_border = int(self.ui.lineEdit.text())
-        _max_border = int(self.ui.lineEdit_2.text())
-        indx_list = _pars_obj.avg_price(self.data_proccesors, _min_border, _max_border)
+        _max_border = int(self.ui.lineEdit_2.text()) 
+        all_indx = _pars_obj.indexing_list(self.data_proccesors)
+        manufactures_data = _pars_obj.most_manufactures(self.data_proccesors, all_indx)
+        self.ui.comboBox.addItem('All')
+        for i in range(len(manufactures_data)):
+            for key, value in manufactures_data[i].items():
+                if value != 0:
+                    self.ui.comboBox.addItem(str(key) + '\t' + str(value))
+
+        _text = _pars_obj.get_symb_of_str(_text)
+        _text = _text.replace('\t', '')
+        indx_list = _pars_obj.avg_price(self.data_proccesors, _min_border, _max_border, _text)
         self.ui.tableWidget.setColumnCount(3)
         self.ui.tableWidget.setRowCount(len(indx_list) + 1) 
         header = self.ui.tableWidget.horizontalHeader()
@@ -59,17 +71,29 @@ class ViewMode(QtWidgets.QDialog):
             self.ui.tableWidget.setItem(count + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_proccesors[i].get("Цена товара"))))
             self.ui.tableWidget.setItem(count + 1, 2, QtWidgets.QTableWidgetItem(self.data_proccesors[i].get("Ссылка на товар")))
             count += 1
-        
-    def build_table_gpu(self):
+       
+    def build_table_gpu(self, _text):
+        self.ui.comboBox.activated[str].connect(self.build_table_gpu)
         dir = os.path.abspath(os.curdir)
         list_frwrd = open_data(dir[:-6] + 'data/' + 'data1Gpu.picle')
         list_bck = open_data(dir[:-6] + 'data/' + 'data2Gpu.picle')
         list_bck = list(reversed(list_bck))
         self.data_gpu = list(itertools.chain(list_frwrd, list_bck))
         _pars_obj = DnsShopParser()
+        self.ui.comboBox.clear()
         _min_border = int(self.ui.lineEdit.text())
         _max_border = int(self.ui.lineEdit_2.text())
-        indx_list = _pars_obj.avg_price(self.data_gpu, _min_border, _max_border)
+        all_indx = _pars_obj.indexing_list(self.data_gpu)
+        manufactures_data = _pars_obj.most_manufactures(self.data_gpu, all_indx)
+        self.ui.comboBox.addItem('All')
+        for i in range(len(manufactures_data)):
+            for key, value in manufactures_data[i].items():
+                if value != 0:
+                    self.ui.comboBox.addItem(str(key) + '\t' + str(value))
+
+        _text = _pars_obj.get_symb_of_str(_text)
+        _text = _text.replace('\t', '')
+        indx_list = _pars_obj.avg_price(self.data_gpu, _min_border, _max_border, _text)
         self.ui.tableWidget.setColumnCount(3)
         self.ui.tableWidget.setRowCount(len(indx_list) + 1) 
         header = self.ui.tableWidget.horizontalHeader()
@@ -86,16 +110,28 @@ class ViewMode(QtWidgets.QDialog):
             self.ui.tableWidget.setItem(count + 1, 2, QtWidgets.QTableWidgetItem(self.data_gpu[i].get("Ссылка на товар")))
             count += 1
 
-    def build_table_ram(self):
+    def build_table_ram(self, _text):
+        self.ui.comboBox.activated[str].connect(self.build_table_ram)
         dir = os.path.abspath(os.curdir)
         list_frwrd = open_data(dir[:-6] + 'data/' + 'data1Ram.picle')
         list_bck = open_data(dir[:-6] + 'data/' + 'data2Ram.picle')
         list_bck = list(reversed(list_bck))
         self.data_ram = list(itertools.chain(list_frwrd, list_bck))
         _pars_obj = DnsShopParser()
+        self.ui.comboBox.clear()
         _min_border = int(self.ui.lineEdit.text())
         _max_border = int(self.ui.lineEdit_2.text())
-        indx_list = _pars_obj.avg_price(self.data_ram, _min_border, _max_border)
+        all_indx = _pars_obj.indexing_list(self.data_ram)
+        manufactures_data = _pars_obj.most_manufactures(self.data_ram, all_indx)
+        self.ui.comboBox.addItem('All')
+        for i in range(len(manufactures_data)):
+            for key, value in manufactures_data[i].items():
+                if value != 0:
+                    self.ui.comboBox.addItem(str(key) + '\t' + str(value))
+
+        _text = _pars_obj.get_symb_of_str(_text)
+        _text = _text.replace('\t', '')
+        indx_list = _pars_obj.avg_price(self.data_ram, _min_border, _max_border, _text)
         self.ui.tableWidget.setColumnCount(3)
         self.ui.tableWidget.setRowCount(len(indx_list) + 1) 
         header = self.ui.tableWidget.horizontalHeader()
