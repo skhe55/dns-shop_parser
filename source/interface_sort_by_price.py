@@ -117,11 +117,22 @@ class Ui_Dialog(object):
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.lineEdit = QtWidgets.QLineEdit(self.gridLayoutWidget_3)
+        self.lineEdit.setStyleSheet("QLineEdit {\n"
+"    border: 2px solid rgb(106, 200, 104);\n"
+"    border-radius: 20px;\n"
+"    padding-left: 5px;\n"
+"    padding-right: 5px;\n"
+"    background-color: rgb(199, 200, 188);\n"
+"}\n"
+"QLineEdit:hover { \n"
+"    border: 2px solid rgb(112, 209, 109);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid rgb(131, 137, 255);\n"
+"    background-color: rgb(106, 198, 103);\n"
+"}")
         self.lineEdit.setObjectName("lineEdit")
         self.gridLayout_3.addWidget(self.lineEdit, 1, 0, 1, 1)
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.gridLayoutWidget_3)
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.gridLayout_3.addWidget(self.lineEdit_2, 1, 1, 1, 1)
         self.label = QtWidgets.QLabel(self.gridLayoutWidget_3)
         self.label.setObjectName("label")
         self.gridLayout_3.addWidget(self.label, 0, 0, 1, 1)
@@ -131,9 +142,23 @@ class Ui_Dialog(object):
         self.label_3 = QtWidgets.QLabel(self.gridLayoutWidget_3)
         self.label_3.setObjectName("label_3")
         self.gridLayout_3.addWidget(self.label_3, 2, 1, 1, 1)
-        self.textEdit = QtWidgets.QTextEdit(self.frame)
-        self.textEdit.setGeometry(QtCore.QRect(640, 10, 104, 81))
-        self.textEdit.setObjectName("textEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.gridLayoutWidget_3)
+        self.lineEdit_2.setStyleSheet("QLineEdit {\n"
+"    border: 2px solid rgb(106, 200, 104);\n"
+"    border-radius: 20px;\n"
+"    padding-left: 5px;\n"
+"    padding-right: 5px;\n"
+"    background-color: rgb(199, 200, 188);\n"
+"}\n"
+"QLineEdit:hover { \n"
+"    border: 2px solid rgb(112, 209, 109);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid rgb(131, 137, 255);\n"
+"    background-color: rgb(106, 198, 103);\n"
+"}")
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.gridLayout_3.addWidget(self.lineEdit_2, 1, 1, 1, 1)
         self.frame_2 = QtWidgets.QFrame(Dialog)
         self.frame_2.setGeometry(QtCore.QRect(0, 190, 901, 201))
         self.frame_2.setStyleSheet("background-color: rgb(199, 200, 188);")
@@ -154,7 +179,7 @@ class Ui_Dialog(object):
         self.pushButton.setText(_translate("Dialog", "Proccesors"))
         self.pushButton_3.setText(_translate("Dialog", "RAM"))
         self.lineEdit.setText(_translate("Dialog", "0"))
-        self.lineEdit_2.setText(_translate("Dialog", "999999"))
         self.label.setText(_translate("Dialog", "Minimum Border"))
         self.label_2.setText(_translate("Dialog", "Maximum Border"))
         self.label_3.setText(_translate("Dialog", "Всего товаров:"))
+        self.lineEdit_2.setText(_translate("Dialog", "999999"))
