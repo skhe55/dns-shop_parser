@@ -8,6 +8,58 @@ import time
 import sys
 import itertools
 import os.path
+from SplashScreen import Ui_SplashScreen
+
+counter = 0
+class SplashScreen(QtWidgets.QMainWindow):
+    def __init__(self):
+        QtWidgets.QMainWindow.__init__(self)
+        self.ui = Ui_SplashScreen()
+        self.ui.setupUi(self)
+        self.progressBarValue(0)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint) 
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground) 
+        self.shadow = QtWidgets.QGraphicsDropShadowEffect(self)
+        self.shadow.setBlurRadius(20)
+        self.shadow.setXOffset(0)
+        self.shadow.setYOffset(0)
+        self.shadow.setColor(QtGui.QColor(0, 0, 0, 120))
+        self.ui.circularBg.setGraphicsEffect(self.shadow)
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.progress)
+        self.timer.start(35)
+
+        self.show()
+
+    def progress (self):
+        global counter
+        value = counter
+        htmlText = """<html><head/><body><p><span style=" font-size:48pt;">{VALUE}</span><span style=" font-size:48pt; vertical-align:super;">%</span></p></body></html>"""
+        newHtml = htmlText.replace("{VALUE}", str(value))
+        self.ui.labelPercentage.setText(newHtml)
+
+        if value >= 100: value = 1.000
+        self.progressBarValue(value)
+
+        if counter > 100:
+            self.timer.stop()
+            self.main = interface_window()
+            self.main.show()
+            self.close()
+        counter += 1
+
+    def progressBarValue(self, value):
+        styleSheet = """
+        QFrame{
+        	border-radius: 150px;
+	        background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:{STOP_1} rgba(199, 200, 188, 0), stop:{STOP_2} rgba(106, 200, 104, 255));
+        }
+        """
+        progress = (100 - value) / 100.0
+        stop_1 = str(progress - 0.001)
+        stop_2 = str(progress)
+        newStylesheet = styleSheet.replace("{STOP_1}", stop_1).replace("{STOP_2}", stop_2)
+        self.ui.circularProgress.setStyleSheet(newStylesheet)
 
 class ViewMode(QtWidgets.QDialog):
     def __init__(self):
@@ -231,7 +283,7 @@ class interface_window(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
-    application = interface_window()
-    application.show()
+    application = SplashScreen()
+    #application.show()
 
     sys.exit(app.exec())        
