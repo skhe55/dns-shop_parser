@@ -9,12 +9,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import resources
 
 class Ui_SplashScreen(object):
     def setupUi(self, SplashScreen):
         SplashScreen.setObjectName("SplashScreen")
         SplashScreen.resize(340, 340)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/main_icon"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        SplashScreen.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(SplashScreen)
         self.centralwidget.setObjectName("centralwidget")
         self.circularProgressBar = QtWidgets.QFrame(self.centralwidget)
@@ -49,13 +52,13 @@ class Ui_SplashScreen(object):
         self.container.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.container.setFrameShadow(QtWidgets.QFrame.Raised)
         self.container.setObjectName("container")
-        self.widget = QtWidgets.QWidget(self.container)
-        self.widget.setGeometry(QtCore.QRect(40, 40, 195, 185))
-        self.widget.setObjectName("widget")
-        self.gridLayout = QtWidgets.QGridLayout(self.widget)
+        self.layoutWidget = QtWidgets.QWidget(self.container)
+        self.layoutWidget.setGeometry(QtCore.QRect(40, 40, 195, 185))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
-        self.labelTitle = QtWidgets.QLabel(self.widget)
+        self.labelTitle = QtWidgets.QLabel(self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Segoe Print")
         font.setPointSize(14)
@@ -67,7 +70,7 @@ class Ui_SplashScreen(object):
         self.labelTitle.setAlignment(QtCore.Qt.AlignCenter)
         self.labelTitle.setObjectName("labelTitle")
         self.gridLayout.addWidget(self.labelTitle, 0, 0, 1, 1)
-        self.labelPercentage = QtWidgets.QLabel(self.widget)
+        self.labelPercentage = QtWidgets.QLabel(self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Yu Gothic UI")
         font.setPointSize(14)
@@ -82,7 +85,7 @@ class Ui_SplashScreen(object):
         self.labelPercentage.setAlignment(QtCore.Qt.AlignCenter)
         self.labelPercentage.setObjectName("labelPercentage")
         self.gridLayout.addWidget(self.labelPercentage, 1, 0, 1, 1)
-        self.labelCredits_2 = QtWidgets.QLabel(self.widget)
+        self.labelCredits_2 = QtWidgets.QLabel(self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Segoe Print")
         font.setPointSize(10)
@@ -97,7 +100,7 @@ class Ui_SplashScreen(object):
         self.labelCredits_2.setAlignment(QtCore.Qt.AlignCenter)
         self.labelCredits_2.setObjectName("labelCredits_2")
         self.gridLayout.addWidget(self.labelCredits_2, 2, 0, 1, 1)
-        self.labelCredits = QtWidgets.QLabel(self.widget)
+        self.labelCredits = QtWidgets.QLabel(self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Segoe Print")
         font.setPointSize(10)
@@ -127,3 +130,4 @@ class Ui_SplashScreen(object):
         self.labelPercentage.setText(_translate("SplashScreen", "<html><head/><body><p><span style=\" font-size:48pt;\">0</span><span style=\" font-size:48pt; vertical-align:super;\">%</span></p></body></html>"))
         self.labelCredits_2.setText(_translate("SplashScreen", "loading..."))
         self.labelCredits.setText(_translate("SplashScreen", "by skhe55"))
+
