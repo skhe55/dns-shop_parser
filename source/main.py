@@ -1,8 +1,9 @@
+from os import name
 from PyQt5 import QtWidgets, QtCore, QtGui
 from window import Ui_MainWindow
 from interface_sort_by_price import Ui_Dialog
 from getDataThread import getData
-from save_func_diff_format import open_data
+from save_func_diff_format import open_data, upload_to_csv_file, upload_to_json_file, upload_to_xlsx_file
 from dns_shop_pars import DnsShopParser
 import time
 import sys
@@ -70,6 +71,9 @@ class ViewMode(QtWidgets.QDialog):
         self.data_gpu = list()
         self.data_ram = list()
         self._toggle_buttons_()
+        self.ui.push_csv.clicked.connect(lambda checked, nameFormatFile = 'csv': self.PushingDataInFile(nameFormatFile))
+        self.ui.push_json.clicked.connect(lambda checked, nameFormatFile = 'json': self.PushingDataInFile(nameFormatFile))
+        self.ui.push_xlsx.clicked.connect(lambda checked, nameFormatFile = 'xlsx': self.PushingDataInFile(nameFormatFile))
 
     def _toggle_buttons_(self):
         dir = os.path.abspath(os.curdir)
@@ -85,6 +89,33 @@ class ViewMode(QtWidgets.QDialog):
             self.ui.pushButton_3.clicked.connect(self.build_table_ram)
         else:
             self.ui.pushButton_3.setEnabled(False)    
+
+    def getDataTable(self):
+        NameList = []
+        PriceList = []
+        LinkList = []
+        ResultList = []
+        parser = DnsShopParser()
+        count = 1
+        for i in range(self.ui.tableWidget.rowCount() - 1):
+            try:
+                NameList.append(self.ui.tableWidget.item(count, 0).text())
+                PriceList.append(self.ui.tableWidget.item(count, 1).text())
+                LinkList.append(self.ui.tableWidget.item(count, 2).text())
+                count += 1
+            except AttributeError as ex:
+                print(ex)
+        ResultList = parser._conversion_to_(NameList, PriceList, LinkList)
+        return ResultList
+
+    def PushingDataInFile(self, nameFormatFile:str):
+        dataList = self.getDataTable()
+        if nameFormatFile == 'xlsx':
+            upload_to_xlsx_file(dataList)
+        elif nameFormatFile == 'csv':
+            upload_to_csv_file(dataList)
+        elif nameFormatFile == 'json':
+            upload_to_json_file(dataList)        
 
     def build_table_proc(self, _text):
         self.ui.comboBox.activated[str].connect(self.build_table_proc)
@@ -198,7 +229,8 @@ class ViewMode(QtWidgets.QDialog):
             self.ui.tableWidget.setItem(count + 1, 0, QtWidgets.QTableWidgetItem(self.data_ram[i].get("Название товара")))
             self.ui.tableWidget.setItem(count + 1, 1, QtWidgets.QTableWidgetItem(str(self.data_ram[i].get("Цена товара"))))
             self.ui.tableWidget.setItem(count + 1, 2, QtWidgets.QTableWidgetItem(self.data_ram[i].get("Ссылка на товар")))
-            count += 1
+            count += 1  
+
 
 class interface_window(QtWidgets.QMainWindow):
     def __init__(self):

@@ -57,7 +57,7 @@ class DnsShopParser(object):
                 print(ex)
         driver.quit()
         self.save_data(list_name, list_price, list_link, "1", _class_prod)
-        print("1: \n", len(list_price), "### ", number_pgs)
+        #print("1: \n", len(list_price), "### ", number_pgs)
 
     def back_parse(self, number_pgs, req, _class_prod):
         number_pgs = number_pgs / 2
@@ -91,7 +91,7 @@ class DnsShopParser(object):
                 print(ex)
         driver.quit()
         self.save_data(list_name, list_price, list_link, "2", _class_prod)
-        print("2: \n", list_price)
+        #print("2: \n", list_price)
 
     def get_url(self, driver):
         return driver.current_url

@@ -5,13 +5,13 @@ import xlsxwriter
 import json
 import pickle
 
-def upload_to_json_file(d:list, name_ctg:str):
-    with open(name_ctg + "_data.json", "w", encoding="utf-8") as file:
+def upload_to_json_file(d:list):
+    with open("data.json", "w", encoding="utf-8") as file:
         json.dump(d, file, indent=12, ensure_ascii=False)
 
-def upload_to_csv_file(d:list, name_ctg:str):
+def upload_to_csv_file(d:list):
         try:
-            with open(name_ctg + "_data.csv", mode="w") as w_file:
+            with open("data.csv", mode="w", encoding='utf-8') as w_file:
                 names = ['Название товара', 'Цена товара', 'Ссылка на товар']
                 file_writer = csv.DictWriter(w_file, delimiter = ",", lineterminator="\r", fieldnames=names)
                 file_writer.writeheader()
@@ -19,7 +19,7 @@ def upload_to_csv_file(d:list, name_ctg:str):
         except Exception:
             return 'create csv file failed'
 
-def upload_to_xlsx_file(d:list, name_ctg:str):
+def upload_to_xlsx_file(d:list):
     name_product = list()
     price_product = list()
     links_product = list()
@@ -35,7 +35,7 @@ def upload_to_xlsx_file(d:list, name_ctg:str):
     df['Цена товара'] = price_product
     df['Ссылка на товар'] = links_product
 
-    writer = pd.ExcelWriter(name_ctg + '_data.xlsx', engine='xlsxwriter')
+    writer = pd.ExcelWriter('data.xlsx', engine='xlsxwriter')
     df.to_excel(writer, sheet_name='Page1', index=False)
 
     writer.sheets['Page1'].set_column('A:A', 120)
