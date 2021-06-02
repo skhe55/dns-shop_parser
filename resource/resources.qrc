@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file alias="main_icon">icons8-triller-app-48.png</file>
+    <file alias="ram_icon">icons8-computer-ram-100.png</file>
+    <file alias="gpu_icon">icons8-video-card-64.png</file>
+    <file alias="proc_icon">icons8-processor-64.png</file>
+    <file alias="load_icon">icons8-loading-bar-100.png</file>
+</qresource>
+</RCC>
