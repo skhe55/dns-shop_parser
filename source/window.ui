@@ -35,11 +35,11 @@
    <string>DNS PARSER</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../resource/icons8-triller-app-48.png</normaloff>../resource/icons8-triller-app-48.png</iconset>
+   <iconset resource="../resource/resources.qrc">
+    <normaloff>:/main_icon</normaloff>:/main_icon</iconset>
   </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow {
@@ -128,8 +128,8 @@ QPushButton:pressed {
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../resource/icons8-processor-64.png</normaloff>../resource/icons8-processor-64.png</iconset>
+        <iconset resource="../resource/resources.qrc">
+         <normaloff>:/proc_icon</normaloff>:/proc_icon</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -172,8 +172,8 @@ QPushButton:pressed {
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../resource/icons8-video-card-64.png</normaloff>../resource/icons8-video-card-64.png</iconset>
+        <iconset resource="../resource/resources.qrc">
+         <normaloff>:/gpu_icon</normaloff>:/gpu_icon</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -225,8 +225,8 @@ QPushButton:pressed {
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../resource/icons8-computer-ram-100.png</normaloff>../resource/icons8-computer-ram-100.png</iconset>
+        <iconset resource="../resource/resources.qrc">
+         <normaloff>:/ram_icon</normaloff>:/ram_icon</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -293,6 +293,8 @@ QPushButton:pressed {
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resource/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

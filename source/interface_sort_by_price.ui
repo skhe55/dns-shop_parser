@@ -35,8 +35,8 @@
    <string>ViewMode</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../resource/icons8-triller-app-48.png</normaloff>../resource/icons8-triller-app-48.png</iconset>
+   <iconset resource="../resource/resources.qrc">
+    <normaloff>:/main_icon</normaloff>:/main_icon</iconset>
   </property>
   <property name="toolTip">
    <string comment="Hi"/>
@@ -296,6 +296,84 @@ QLineEdit:focus {
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>77</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="push_json">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Save in JSON</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="push_xlsx">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Save in XLSX</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="push_csv">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Save in CSV</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QFrame" name="frame_2">
    <property name="geometry">
@@ -320,6 +398,8 @@ QLineEdit:focus {
   <zorder>frame</zorder>
   <zorder>gridLayoutWidget</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resource/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
