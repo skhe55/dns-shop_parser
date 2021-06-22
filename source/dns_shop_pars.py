@@ -13,7 +13,7 @@ import os.path
 
 ignored_exceptions = (NoSuchElementException,StaleElementReferenceException)
 options = webdriver.ChromeOptions()
-options.add_argument("--headless")
+#options.add_argument("--headless")
 options.add_experimental_option("excludeSwitches", ["enable-logging"])
 list_of_manufacturers = ['AMD', 'Intel', 'Asrock', 'ASUS', 'GIGABYTE',
                          'Inno3D', 'KFA2', 'MSI', 'Palit', 'PNY', 'PowerColor'
@@ -57,7 +57,6 @@ class DnsShopParser(object):
                 print(ex)
         driver.quit()
         self.save_data(list_name, list_price, list_link, "1", _class_prod)
-        #print("1: \n", len(list_price), "### ", number_pgs)
 
     def back_parse(self, number_pgs, req, _class_prod):
         number_pgs = number_pgs / 2
@@ -106,7 +105,7 @@ class DnsShopParser(object):
             WebDriverWait(driver, 0, ignored_exceptions=ignored_exceptions).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='pagination-widget__page-link pagination-widget__page-link_last ']"))).click()
             url = self.get_url(driver)
         except Exception as ex:
-            print(ex)
+            print('Не получилось получить юрл ласт страницы')
         finally:
             driver.quit()    
         return url

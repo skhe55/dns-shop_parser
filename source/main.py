@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 from window import Ui_MainWindow
 from interface_sort_by_price import Ui_Dialog
 from getDataThread import getData
-from save_func_diff_format import open_data, upload_to_csv_file, upload_to_json_file, upload_to_xlsx_file
+from save_func_diff_format import open_data, upload_to_csv_file, upload_to_json_file, upload_to_xlsx_file, upload_to_db_file
 from dns_shop_pars import DnsShopParser
 import time
 import sys
@@ -74,6 +74,7 @@ class ViewMode(QtWidgets.QDialog):
         self.ui.push_csv.clicked.connect(lambda checked, nameFormatFile = 'csv': self.PushingDataInFile(nameFormatFile))
         self.ui.push_json.clicked.connect(lambda checked, nameFormatFile = 'json': self.PushingDataInFile(nameFormatFile))
         self.ui.push_xlsx.clicked.connect(lambda checked, nameFormatFile = 'xlsx': self.PushingDataInFile(nameFormatFile))
+        self.ui.push_db.clicked.connect(lambda checked, nameFormatFile = 'db': self.PushingDataInFile(nameFormatFile))
 
     def _toggle_buttons_(self):
         dir = os.path.abspath(os.curdir)
@@ -115,7 +116,10 @@ class ViewMode(QtWidgets.QDialog):
         elif nameFormatFile == 'csv':
             upload_to_csv_file(dataList)
         elif nameFormatFile == 'json':
-            upload_to_json_file(dataList)        
+            upload_to_json_file(dataList) 
+        elif nameFormatFile == 'db':
+            for i in range(len(dataList)):
+                upload_to_db_file(dataList, i)           
 
     def build_table_proc(self, _text):
         self.ui.comboBox.activated[str].connect(self.build_table_proc)
@@ -237,11 +241,11 @@ class interface_window(QtWidgets.QMainWindow):
         super(interface_window, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.pushButton.clicked.connect(self.flashSplash)
+        #self.ui.pushButton.clicked.connect(self.flashSplash)
         self.ui.pushButton.released.connect(self.ProcessorParsing)
-        self.ui.pushButton_4.clicked.connect(self.flashSplash)
+        #self.ui.pushButton_4.clicked.connect(self.flashSplash)
         self.ui.pushButton_4.released.connect(self.VideocardParsing)
-        self.ui.pushButton_3.clicked.connect(self.flashSplash)
+        #self.ui.pushButton_3.clicked.connect(self.flashSplash)
         self.ui.pushButton_3.released.connect(self.Ram_DIMMParsing)
         self.ui.ViewModeBtn.clicked.connect(self.View)
         self.list_get_requests = [        
@@ -254,7 +258,7 @@ class interface_window(QtWidgets.QMainWindow):
         self.data_about_gp = list()
         self.data_about_ram = list()
         dir = os.path.abspath(os.curdir)
-        self.splash = QtWidgets.QSplashScreen(QtGui.QPixmap(dir[:-6] + 'resource/icons8-loading-bar-100.png'))
+        #self.splash = QtWidgets.QSplashScreen(QtGui.QPixmap(dir[:-6] + 'resource/icons8-loading-bar-100.png'))
  
     def ProcessorParsing(self):
         #self._toggle_buttons_(False)
@@ -269,7 +273,7 @@ class interface_window(QtWidgets.QMainWindow):
         self.thread.finished.connect(self.thread.deleteLater)
         self.thread.start()
         self.ui.pushButton.setEnabled(False)
-        QtCore.QTimer.singleShot(5000, self.splash.close)
+        #QtCore.QTimer.singleShot(5000, self.splash.close)
 
 
     def VideocardParsing(self):
@@ -282,11 +286,10 @@ class interface_window(QtWidgets.QMainWindow):
         self.worker_2.finished_1.connect(self.thread_2.quit)
         self.worker_2.finished_1.connect(self.worker_2.deleteLater)
         self.worker_2.finished_1.connect(lambda : self.ui.pushButton_4.setEnabled(True))
-        #self.worker_2.finished_1.connect(lambda : self._toggle_buttons_(True))
         self.thread_2.finished.connect(self.thread_2.deleteLater)
         self.thread_2.start()
         self.ui.pushButton_4.setEnabled(False)
-        QtCore.QTimer.singleShot(5000, self.splash.close)
+        #QtCore.QTimer.singleShot(5000, self.splash.close)
         
 
     def Ram_DIMMParsing(self):
@@ -302,7 +305,7 @@ class interface_window(QtWidgets.QMainWindow):
         self.thread_3.finished.connect(self.thread_3.deleteLater)
         self.thread_3.start()
         self.ui.pushButton_3.setEnabled(False)
-        QtCore.QTimer.singleShot(5000, self.splash.close)
+        #QtCore.QTimer.singleShot(5000, self.splash.close)
 
     def flashSplash(self):
         self.splash.show()
@@ -311,7 +314,7 @@ class interface_window(QtWidgets.QMainWindow):
         self.ViewMode_ = None
         if not self.ViewMode_:
             self.ViewMode_ = ViewMode()
-        self.ViewMode_.show()
+        self.ViewMode_.show() 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])

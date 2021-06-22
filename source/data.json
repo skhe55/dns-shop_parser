@@ -1,47 +1,672 @@
 [
             {
-                        "Название товара": "Видеокарта ASUS GeForce GT 710 Silent LP [GT710-SL-1GD5-BRK] [PCI-E 2.0, 1 ГБ GDDR5, 32 бит, 954 МГц, HDMI, VGA (D-Sub), DVI-D]",
-                        "Цена товара": 3399,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/32494346c3653330/videokarta-asus-geforce-gt-710-silent-lp-gt710-sl-1gd5-brk/"
+                        "Название товара": "Процессор AMD Ryzen 3 3100 OEM [AM4, 4 x 3600 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 10099,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/853e222e98b93332/processor-amd-ryzen-3-3100-oem/"
             },
             {
-                        "Название товара": "Видеокарта ASUS GeForce GT 710 Silent LP [GT710-SL-1GD5] [PCI-E 2.0, 1 ГБ GDDR5, 32 бит, 954 МГц, HDMI, VGA (D-Sub), DVI-D]",
-                        "Цена товара": 3399,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/c999cd51d8a53330/videokarta-asus-geforce-gt-710-silent-lp-gt710-sl-1gd5/"
+                        "Название товара": "Процессор Intel Pentium Gold G5420 OEM [LGA 1151-v2, 2 x 3800 МГц, L2 - 512 КБ, L3 - 4 МБ, 2хDDR4-2400 МГц, Intel UHD Graphics 610, TDP 54 Вт]",
+                        "Цена товара": 10099,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/9320b76075253332/processor-intel-pentium-gold-g5420-oem/"
             },
             {
-                        "Название товара": "Видеокарта ASUS GeForce GT 710 Silent LP [GT710-SL-2GD5-BRK] [PCI-E 2.0, 2 ГБ GDDR5, 64 бит, 954 МГц, HDMI, VGA (D-Sub), DVI-D]",
-                        "Цена товара": 4199,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/773265d1e3a43330/videokarta-asus-geforce-gt-710-silent-lp-gt710-sl-2gd5-brk/"
+                        "Название товара": "Процессор Intel Core i3-9100F OEM [LGA 1151-v2, 4 x 3600 МГц, L2 - 1 МБ, L3 - 6 МБ, 2хDDR4-2400 МГц, TDP 65 Вт]",
+                        "Цена товара": 10199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/c6d57433d07c3332/processor-intel-core-i3-9100f-oem/"
             },
             {
-                        "Название товара": "Видеокарта ASUS GeForce GT 710 Silent LP [GT710-SL-2GD5] [PCI-E 2.0, 2 ГБ GDDR5, 64 бит, 954 МГц, HDMI, VGA (D-Sub), DVI-D]",
-                        "Цена товара": 4299,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/3cff579bc8213330/videokarta-asus-geforce-gt-710-silent-lp-gt710-sl-2gd5/"
+                        "Название товара": "Процессор Intel Core i3-10100F BOX [LGA 1200, 4 x 3600 МГц, L2 - 1 МБ, L3 - 6 МБ, 2хDDR4-2666 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 10299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/d9ac6f2cf3293332/processor-intel-core-i3-10100f-box/"
             },
             {
-                        "Название товара": "Видеокарта ASUS GeForce GT 710 Silent LP [GT710-4H-SL-2GD5] [PCI-E 2.0, 2 ГБ GDDR5, 64 бит, 954 МГц, HDMI (4 шт)]",
-                        "Цена товара": 4999,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/3265675eaf953332/videokarta-asus-geforce-gt-710-silent-lp-gt710-4h-sl-2gd5/"
+                        "Название товара": "Процессор Intel Pentium Gold G5420 BOX [LGA 1151-v2, 2 x 3800 МГц, L2 - 512 КБ, L3 - 4 МБ, 2хDDR4-2400 МГц, Intel UHD Graphics 610, TDP 54 Вт, кулер]",
+                        "Цена товара": 10299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/69ec017975253332/processor-intel-pentium-gold-g5420-box/"
             },
             {
-                        "Название товара": "Видеокарта ASUS GeForce GTX 1050 Ti Cerberus OC Edition [CERBERUS-GTX1050TI-O4G] [PCI-E 3.0, 4 ГБ GDDR5, 128 бит, 1341 МГц - 1480 МГц, HDMI, DisplayPort, DVI-D]",
-                        "Цена товара": 24599,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/1533637d04bc3330/videokarta-asus-geforce-gtx-1050-ti-cerberus-oc-edition-cerberus-gtx1050ti-o4g/"
+                        "Название товара": "Процессор Intel Core i3-9100F BOX [LGA 1151-v2, 4 x 3600 МГц, L2 - 1 МБ, L3 - 6 МБ, 2хDDR4-2400 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 10599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/06b8759264b71b80/processor-intel-core-i3-9100f-box/"
             },
             {
-                        "Название товара": "Видеокарта ASUS GeForce GTX 1650 PHOENIX OC [PH-GTX1650-O4GD6] [PCI-E 3.0, 4 ГБ GDDR6, 128 бит, 1410 МГц - 1635 МГц, HDMI, DisplayPort, DVI-D]",
+                        "Название товара": "Процессор AMD Ryzen 5 2600 BOX [AM4, 6 x 3400 МГц, L2 - 3 Мб, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 10799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/06bf9e32275d3330/processor-amd-ryzen-5-2600-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 2600 OEM [AM4, 6 x 3400 МГц, L2 - 3 Мб, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 65 Вт]",
+                        "Цена товара": 10799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/3d02682f275d3330/processor-amd-ryzen-5-2600-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 1600 BOX [AM4, 6 x 3200 МГц, L2 - 3 Мб, L3 - 16 Мб, 2хDDR4-2667 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 10899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/bef12fd0f0643332/processor-amd-ryzen-5-1600-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3500 OEM [AM4, 6 x 3600 МГц, L2 - 3 Мб, L3 - 16 Мб, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 10899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/f7d57c0ce1aa3332/processor-amd-ryzen-5-3500-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i3-10105F OEM [LGA 1200, 4 x 3700 МГц, L3 - 6 МБ, 2хDDR4-2666 МГц, TDP 65 Вт]",
+                        "Цена товара": 10899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/ff78b73d6c153332/processor-intel-core-i3-10105f-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3500X OEM [AM4, 6 x 3600 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 11399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/9becbea51d401b80/processor-amd-ryzen-5-3500x-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 2600X BOX [AM4, 6 x 3600 МГц, L2 - 3 Мб, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 95 Вт, кулер]",
+                        "Цена товара": 11799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/e7c9fe6e275b3330/processor-amd-ryzen-5-2600x-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 2600X OEM [AM4, 6 x 3600 МГц, L2 - 3 Мб, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 95 Вт]",
+                        "Цена товара": 11799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/ca54e8e8275c3330/processor-amd-ryzen-5-2600x-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i3-10100 OEM [LGA 1200, 4 x 3600 МГц, L2 - 1 МБ, L3 - 6 МБ, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 12999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/a66091f96a703332/processor-intel-core-i3-10100-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9400F OEM [LGA 1151-v2, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, TDP 65 Вт]",
+                        "Цена товара": 13299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/cace956417a13332/processor-intel-core-i5-9400f-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i3-10100 BOX [LGA 1200, 4 x 3600 МГц, L2 - 1 МБ, L3 - 6 МБ, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 13399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/756a1f786a703332/processor-intel-core-i3-10100-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i3-10105 OEM [LGA 1200, 4 x 3700 МГц, L3 - 6 МБ, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 13399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/f9b436a76c163332/processor-intel-core-i3-10105-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10400F OEM [LGA 1200, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 65 Вт]",
+                        "Цена товара": 13499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/b60145356a693332/processor-intel-core-i5-10400f-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10400F OEM [LGA 1200, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 65 Вт]",
+                        "Цена товара": 13499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/15840a2cf6ea1b80/processor-intel-core-i5-10400f-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 3 2200G OEM [AM4, 4 x 3500 МГц, L2 - 2 МБ, L3 - 4 МБ, 2хDDR4-2933 МГц, Radeon Vega 8, TDP 65 Вт]",
+                        "Цена товара": 13599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/5594d18dfbf43330/processor-amd-ryzen-3-2200g-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i3-10105 BOX [LGA 1200, 4 x 3700 МГц, L3 - 6 МБ, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 13699,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/73d1b8bd6c163332/processor-intel-core-i3-10105-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9400F BOX [LGA 1151-v2, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 13699,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/9cd0dbe117a13332/processor-intel-core-i5-9400f-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10400F BOX [LGA 1200, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 13899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/e9c733de6a693332/processor-intel-core-i5-10400f-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 3 PRO 3200G OEM [AM4, 4 x 3600 МГц, L2 - 2 МБ, L3 - 4 МБ, 2хDDR4-2933 МГц, Radeon Vega 8, TDP 65 Вт]",
+                        "Цена товара": 14499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/cbe7fdea7e2e1b80/processor-amd-ryzen-3-pro-3200g-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 3 PRO 3200GE OEM [AM4, 4 x 3300 МГц, L2 - 2 МБ, L3 - 4 МБ, 2хDDR4-2933 МГц, Radeon Vega 8, TDP 35 Вт]",
+                        "Цена товара": 14499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/8e9d6a7459433332/processor-amd-ryzen-3-pro-3200ge-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i3-10320 OEM [LGA 1200, 4 x 3800 МГц, L2 - 1 МБ, L3 - 8 МБ, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 14699,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/d632cee26a6f3332/processor-intel-core-i3-10320-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3600 OEM [AM4, 6 x 3600 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 14999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/b9c6465190d21b80/processor-amd-ryzen-5-3600-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9600KF OEM [LGA 1151-v2, 6 x 3700 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, TDP 95 Вт]",
+                        "Цена товара": 14999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/16a6ea36ce0c3332/processor-intel-core-i5-9600kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3350G OEM [AM4, 4 x 3600 МГц, L2 - 2 МБ, L3 - 4 МБ, 2хDDR4-2933 МГц, Radeon Graphics, TDP 65 Вт]",
+                        "Цена товара": 15499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/8498d66411e73332/processor-amd-ryzen-5-3350g-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 3 3200G BOX [AM4, 4 x 3600 МГц, L2 - 2 МБ, L3 - 4 МБ, 2хDDR4-2933 МГц, Radeon Vega 8, TDP 65 Вт, кулер]",
+                        "Цена товара": 15799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/8ddbe22090d41b80/processor-amd-ryzen-3-3200g-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 3 3200G BOX [AM4, 4 x 3600 МГц, L2 - 2 МБ, L3 - 4 МБ, 2хDDR4-2933 МГц, Radeon Vega 8, TDP 65 Вт, кулер]",
+                        "Цена товара": 15799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/6145950aa2162eb1/processor-amd-ryzen-3-3200g-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9600KF BOX [LGA 1151-v2, 6 x 3700 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, TDP 95 Вт]",
+                        "Цена товара": 15999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/1af5286317a03332/processor-intel-core-i5-9600kf-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10400 OEM [LGA 1200, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 16199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/5cb1e10ee0f03332/processor-intel-core-i5-10400-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10400 OEM [LGA 1200, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 16199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/c1ff7d286a6d3332/processor-intel-core-i5-10400-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9600K BOX [LGA 1151-v2, 6 x 3700 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 95 Вт]",
+                        "Цена товара": 16199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/2bad28b8bfd13330/processor-intel-core-i5-9600k-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3600X OEM [AM4, 6 x 3800 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 95 Вт]",
+                        "Цена товара": 16299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/5cfcb2b290d31b80/processor-amd-ryzen-5-3600x-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10600KF OEM [LGA 1200, 6 x 4100 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 125 Вт]",
+                        "Цена товара": 16299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/ed1c99f86a683332/processor-intel-core-i5-10600kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9600K OEM [LGA 1151-v2, 6 x 3700 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 95 Вт]",
+                        "Цена товара": 16399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/ccb4e72fb73d1b80/processor-intel-core-i5-9600k-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3600 BOX [AM4, 6 x 3600 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 16599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/d9e1205990d11b80/processor-amd-ryzen-5-3600-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 PRO 2700 OEM [AM4, 8 x 3200 МГц, L2 - 4 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 65 Вт]",
+                        "Цена товара": 16599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/762609aef72a3332/processor-amd-ryzen-7-pro-2700-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10400 BOX [LGA 1200, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 16599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/851c86c06a6d3332/processor-intel-core-i5-10400-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9400 OEM [LGA 1151-v2, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 16799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/566cac19cd323332/processor-intel-core-i5-9400-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9400 OEM [LGA 1151-v2, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 16799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/1b42cafe17a13332/processor-intel-core-i5-9400-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11400F BOX [LGA 1200, 6 x 2600 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 17199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/00c1301d6c303332/processor-intel-core-i5-11400f-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10600KF BOX [LGA 1200, 6 x 4100 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 125 Вт]",
+                        "Цена товара": 17399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/bb2ecaa36a683332/processor-intel-core-i5-10600kf-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10500 OEM [LGA 1200, 6 x 3100 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 17499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/2c5c72736a6d3332/processor-intel-core-i5-10500-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11400 BOX [LGA 1200, 6 x 2600 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 730, TDP 65 Вт, кулер]",
+                        "Цена товара": 17499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/450088926c2f3332/processor-intel-core-i5-11400-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11400 OEM [LGA 1200, 6 x 2600 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 730, TDP 65 Вт]",
+                        "Цена товара": 17499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/a4396c106c2f3332/processor-intel-core-i5-11400-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10500 BOX [LGA 1200, 6 x 3100 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 17699,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/07131cdb6a6d3332/processor-intel-core-i5-10500-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-9400 BOX [LGA 1151-v2, 6 x 2900 МГц, L2 - 1.5 МБ, L3 - 9 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 17999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/fa5d55f817a03332/processor-intel-core-i5-9400-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10600K OEM [LGA 1200, 6 x 4100 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 18199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/56e91efb6a653332/processor-intel-core-i5-10600k-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10600 OEM [LGA 1200, 6 x 3300 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 18299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/7f581b6a6a6a3332/processor-intel-core-i5-10600-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 2700X BOX [AM4, 8 x 3700 МГц, L2 - 4 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 105 Вт, кулер]",
+                        "Цена товара": 18599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/50e47a6527593330/processor-amd-ryzen-7-2700x-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3400G BOX [AM4, 4 x 3700 МГц, L2 - 2 МБ, L3 - 4 МБ, 2хDDR4-2933 МГц, Radeon Vega 11, TDP 65 Вт, кулер]",
+                        "Цена товара": 18799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/fa309b4ba0a02eb1/processor-amd-ryzen-5-3400g-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11500 BOX [LGA 1200, 6 x 2700 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 65 Вт, кулер]",
+                        "Цена товара": 18799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/ab01d8126c2e3332/processor-intel-core-i5-11500-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3600X BOX [AM4, 6 x 3800 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 95 Вт, кулер]",
+                        "Цена товара": 18999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/2acb6b6090d31b80/processor-amd-ryzen-5-3600x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10600K Marvels Avengers Collectors Edition BOX [LGA 1200, 6 x 4100 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 18999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/38ee6111cd6e3332/processor-intel-core-i5-10600k-marvels-avengers-collectors-edition-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10600 BOX [LGA 1200, 6 x 3300 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 19199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/4f9360b36a6a3332/processor-intel-core-i5-10600-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-10600K BOX [LGA 1200, 6 x 4100 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 19299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/2ee2c4316a653332/processor-intel-core-i5-10600k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11600 OEM [LGA 1200, 6 x 2800 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 65 Вт]",
+                        "Цена товара": 19599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/514f6f4c6c2e3332/processor-intel-core-i5-11600-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11600 BOX [LGA 1200, 6 x 2800 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 65 Вт, кулер]",
+                        "Цена товара": 20599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/0371e1cb6c2e3332/processor-intel-core-i5-11600-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 3600XT BOX [AM4, 6 x 3800 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 95 Вт, кулер]",
+                        "Цена товара": 20799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/2489cb7bb9b61b80/processor-amd-ryzen-5-3600xt-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11600KF OEM [LGA 1200, 6 x 3900 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, TDP 125 Вт]",
+                        "Цена товара": 20999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/60eaecb76c2d3332/processor-intel-core-i5-11600kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700F OEM [LGA 1151-v2, 8 x 3000 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 65 Вт]",
+                        "Цена товара": 21599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/5019eac575223332/processor-intel-core-i7-9700f-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700KF OEM [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 95 Вт]",
+                        "Цена товара": 21599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/e0eeea19ce0d3332/processor-intel-core-i7-9700kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 PRO 3700 OEM [AM4, 8 x 3600 МГц, L2 - 4 МБ, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 21999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/ddc41495eb313332/processor-amd-ryzen-7-pro-3700-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11600K OEM [LGA 1200, 6 x 3900 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 125 Вт]",
+                        "Цена товара": 21999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/33dd2fc46c2c3332/processor-intel-core-i5-11600k-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11600KF BOX [LGA 1200, 6 x 3900 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, TDP 125 Вт]",
+                        "Цена товара": 22199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/b911b4636c2c3332/processor-intel-core-i5-11600kf-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i5-11600K BOX [LGA 1200, 6 x 3900 МГц, L3 - 12 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 125 Вт]",
+                        "Цена товара": 22499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/cfa074456c2b3332/processor-intel-core-i5-11600k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700KF BOX [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 95 Вт]",
+                        "Цена товара": 22599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/48b58571179f3332/processor-intel-core-i7-9700kf-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700F BOX [LGA 1151-v2, 8 x 3000 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 22699,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/9ca779a275223332/processor-intel-core-i7-9700f-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700 OEM [LGA 1151-v2, 8 x 3000 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 23299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/37a72d7175233332/processor-intel-core-i7-9700-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 5600X OEM [AM4, 6 x 3700 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 23599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/3239ebce09e93332/processor-amd-ryzen-5-5600x-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 3700X OEM [AM4, 8 x 3600 МГц, L2 - 4 МБ, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 23599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/4d664a0d90d61b80/processor-amd-ryzen-7-3700x-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700F OEM [LGA 1200, 8 x 2900 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 65 Вт]",
+                        "Цена товара": 23799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/4607168e6a693332/processor-intel-core-i7-10700f-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700 BOX [LGA 1151-v2, 8 x 3000 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 24199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/f131c63a75223332/processor-intel-core-i7-9700-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700F BOX [LGA 1200, 8 x 2900 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 24399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/791efe6a6a693332/processor-intel-core-i7-10700f-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700 OEM [LGA 1200, 8 x 2900 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 25099,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/a02d31946ca53332/processor-intel-core-i7-10700-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 5 5600X BOX [AM4, 6 x 3700 МГц, L2 - 3 Мб, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 25599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/01ffb0a109e93332/processor-amd-ryzen-5-5600x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700 BOX [LGA 1200, 8 x 2900 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 25599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/79ba83266ca53332/processor-intel-core-i7-10700-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700K OEM [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 95 Вт]",
+                        "Цена товара": 25599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/e1d16b22bd703332/processor-intel-core-i7-9700k-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-8700K BOX [LGA 1151-v2, 6 x 3700 МГц, L2 - 1.5 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 95 Вт]",
+                        "Цена товара": 26299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/c2517e668e123330/processor-intel-core-i7-8700k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700KF OEM [LGA 1200, 8 x 3800 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 125 Вт]",
+                        "Цена товара": 26599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/8745bf236a683332/processor-intel-core-i7-10700kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-9700K BOX [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 12 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 95 Вт]",
+                        "Цена товара": 26599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/c5e7ecdfbfd53330/processor-intel-core-i7-9700k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-11700F BOX [LGA 1200, 8 x 2500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 26899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/337a35176c2a3332/processor-intel-core-i7-11700f-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700KF BOX [LGA 1200, 8 x 3800 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, TDP 125 Вт]",
                         "Цена товара": 26999,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/7e1e3282b5101b80/videokarta-asus-geforce-gtx-1650-phoenix-oc-ph-gtx1650-o4gd6/"
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/4f632a226a683332/processor-intel-core-i7-10700kf-box/"
             },
             {
-                        "Название товара": "Видеокарта ASUS TUF Gaming GeForce GTX 1650 OC Edition [TUF-GTX1650-O4GD6-GAMING] [PCI-E 3.0, 4 ГБ GDDR6, 128 бит, 1410 МГц - 1680 МГц, HDMI, DisplayPort, DVI-D]",
-                        "Цена товара": 29999,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/52ab2f8eb6a13332/videokarta-asus-tuf-gaming-geforce-gtx-1650-oc-edition-tuf-gtx1650-o4gd6-gaming/"
+                        "Название товара": "Процессор Intel Core i7-11700 OEM [LGA 1200, 8 x 2500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 65 Вт]",
+                        "Цена товара": 27699,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/0f3fa9fa6c293332/processor-intel-core-i7-11700-oem/"
             },
             {
-                        "Название товара": "Видеокарта ASUS TUF Gaming GeForce GTX 1650 [TUF GTX1650-4GD6-P-GAMING] [PCI-E 3.0, 4 ГБ GDDR6, 128 бит, 1410 МГц - 1620 МГц, HDMI, DisplayPort, DVI-D]",
-                        "Цена товара": 29999,
-                        "Ссылка на товар": "https://www.dns-shop.ru/product/7a545da82ada3332/videokarta-asus-tuf-gaming-geforce-gtx-1650-tuf-gtx1650-4gd6-p-gaming/"
+                        "Название товара": "Процессор AMD Ryzen 7 3700X BOX [AM4, 8 x 3600 МГц, L2 - 4 МБ, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 27899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/1b08ec9490d61b80/processor-amd-ryzen-7-3700x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-11700 BOX [LGA 1200, 8 x 2500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 65 Вт, кулер]",
+                        "Цена товара": 28099,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/d2cdbf316b773332/processor-intel-core-i7-11700-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700K BOX [LGA 1200, 8 x 3800 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 28899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/184616cc6a643332/processor-intel-core-i7-10700k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-10700K OEM [LGA 1200, 8 x 3800 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 29399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/cd99f2306a643332/processor-intel-core-i7-10700k-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900F OEM [LGA 1200, 10 x 2800 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, TDP 65 Вт]",
+                        "Цена товара": 30399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/e9f5ca4c6a673332/processor-intel-core-i9-10900f-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-9900KF OEM [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2666 МГц, TDP 95 Вт]",
+                        "Цена товара": 30999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/16cca490ce0e3332/processor-intel-core-i9-9900kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-9900 OEM [LGA 1151-v2, 8 x 3100 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 31999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/b625b631709a3332/processor-intel-core-i9-9900-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-9900KF BOX [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2666 МГц, TDP 95 Вт]",
+                        "Цена товара": 31999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/14fbb3de17983332/processor-intel-core-i9-9900kf-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 3800X BOX [AM4, 8 x 3900 МГц, L2 - 4 МБ, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 105 Вт, кулер]",
+                        "Цена товара": 32199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/8cb94c4f90d61b80/processor-amd-ryzen-7-3800x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900F BOX [LGA 1200, 10 x 2800 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 32999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/b157ba3f6a673332/processor-intel-core-i9-10900f-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-11700KF OEM [LGA 1200, 8 x 3600 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, TDP 95 Вт]",
+                        "Цена товара": 33299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/44eb89826c2b3332/processor-intel-core-i7-11700kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-11700KF BOX [LGA 1200, 8 x 3600 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, TDP 125 Вт]",
+                        "Цена товара": 33999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/e936670d6c2a3332/processor-intel-core-i7-11700kf-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-9900K BOX [LGA 1151-v2, 8 x 3600 МГц, L2 - 2 МБ, L3 - 16 Мб, 2хDDR4-2666 МГц, Intel UHD Graphics 630, TDP 95 Вт]",
+                        "Цена товара": 34199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/3fbac7d5a0a23332/processor-intel-core-i9-9900k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-11900F OEM [LGA 1200, 8 x 2500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 34699,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/43ba39596c283332/processor-intel-core-i9-11900f-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900 OEM [LGA 1200, 10 x 2800 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 65 Вт]",
+                        "Цена товара": 34999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/3babb15d6ca53332/processor-intel-core-i9-10900-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-11700K OEM [LGA 1200, 8 x 3600 МГц, L2 - 4 МБ, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 125 Вт]",
+                        "Цена товара": 35199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/9ece5c3a6c293332/processor-intel-core-i7-11700k-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10850K OEM [LGA 1200, 10 x 3600 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 35199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/171bdd4acd5d3332/processor-intel-core-i9-10850k-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 3800XT BOX [AM4, 8 x 3900 МГц, L2 - 4 МБ, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 35599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/103828f2b9b91b80/processor-amd-ryzen-7-3800xt-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 5800X OEM [AM4, 8 x 3800 МГц, L2 - 4 МБ, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 35599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/bfb6376209e83332/processor-amd-ryzen-7-5800x-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900 BOX [LGA 1200, 10 x 2800 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 65 Вт, кулер]",
+                        "Цена товара": 35999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/fa2a87e36ca43332/processor-intel-core-i9-10900-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i7-11700K BOX [LGA 1200, 8 x 3600 МГц, L2 - 4 МБ, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 125 Вт]",
+                        "Цена товара": 36099,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/42da77976b723332/processor-intel-core-i7-11700k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-11900F BOX [LGA 1200, 8 x 2500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, TDP 65 Вт, кулер]",
+                        "Цена товара": 36299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/ff520a126c273332/processor-intel-core-i9-11900f-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10850K BOX [LGA 1200, 10 x 3600 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 36599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/dcb541b3cd5c3332/processor-intel-core-i9-10850k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-11900 OEM [LGA 1200, 8 x 2500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 65 Вт]",
+                        "Цена товара": 36899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/a567f9b76c273332/processor-intel-core-i9-11900-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-11900 BOX [LGA 1200, 8 x 2500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 65 Вт, кулер]",
+                        "Цена товара": 37599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/393a113e6c273332/processor-intel-core-i9-11900-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 7 5800X BOX [AM4, 8 x 3800 МГц, L2 - 4 МБ, L3 - 32 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 37899,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/9628d69c09e83332/processor-amd-ryzen-7-5800x-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 9 3900 OEM [AM4, 12 x 3100 МГц, L2 - 6 МБ, L3 - 64 МБ, 2хDDR4-3200 МГц, TDP 65 Вт]",
+                        "Цена товара": 38399,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/c252aa9315533332/processor-amd-ryzen-9-3900-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900KF OEM [LGA 1200, 10 x 3700 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, TDP 125 Вт]",
+                        "Цена товара": 38799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/d6859e626a653332/processor-intel-core-i9-10900kf-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900KF BOX [LGA 1200, 10 x 3700 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, TDP 125 Вт]",
+                        "Цена товара": 40999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/1da925c76a663332/processor-intel-core-i9-10900kf-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 9 3900X BOX [AM4, 12 x 3800 МГц, L2 - 6 МБ, L3 - 64 МБ, 2хDDR4-3200 МГц, TDP 105 Вт, кулер]",
+                        "Цена товара": 43099,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/dc4dba6d93183332/processor-amd-ryzen-9-3900x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900K Marvels Avengers Collectors Edition BOX [LGA 1200, 10 x 3700 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 46499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/58482114cd6b3332/processor-intel-core-i9-10900k-marvels-avengers-collectors-edition-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-11900K OEM [LGA 1200, 8 x 3500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 125 Вт]",
+                        "Цена товара": 46599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/2153e98b6c253332/processor-intel-core-i9-11900k-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900K OEM [LGA 1200, 10 x 3700 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 46999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/bb3722536a613332/processor-intel-core-i9-10900k-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900K BOX [LGA 1200, 10 x 3700 МГц, L2 - 2.5 МБ, L3 - 20 МБ, 2хDDR4-2933 МГц, Intel UHD Graphics 630, TDP 125 Вт]",
+                        "Цена товара": 47299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/30bc4d166a633332/processor-intel-core-i9-10900k-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-11900K BOX [LGA 1200, 8 x 3500 МГц, L3 - 16 Мб, 2хDDR4-3200 МГц, Intel UHD Graphics 750, TDP 125 Вт]",
+                        "Цена товара": 47499,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/79887bc46c243332/processor-intel-core-i9-11900k-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 9 5900X BOX [AM4, 12 x 3700 МГц, L2 - 6 МБ, L3 - 64 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 51999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/af47b33c09e73332/processor-amd-ryzen-9-5900x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900X OEM [LGA 2066, 10 x 3700 МГц, L2 - 10 МБ, L3 - 19.25 МБ, 4хDDR4-2933 МГц, TDP 165 Вт]",
+                        "Цена товара": 52299,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/b323a249f3aa1b80/processor-intel-core-i9-10900x-oem/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 9 5900X OEM [AM4, 12 x 3700 МГц, L2 - 6 МБ, L3 - 64 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 52999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/278adb2a09e83332/processor-amd-ryzen-9-5900x-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10900X BOX [LGA 2066, 10 x 3700 МГц, L2 - 10 МБ, L3 - 19.25 МБ, 4хDDR4-2933 МГц, TDP 165 Вт]",
+                        "Цена товара": 53099,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/3276324df3aa1b80/processor-intel-core-i9-10900x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10920X OEM [LGA 2066, 12 x 3500 МГц, L2 - 12 Мб, L3 - 19.25 МБ, 4хDDR4-2933 МГц, TDP 165 Вт]",
+                        "Цена товара": 60999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/782ce272f3ab1b80/processor-intel-core-i9-10920x-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10920X BOX [LGA 2066, 12 x 3500 МГц, L2 - 12 Мб, L3 - 19.25 МБ, 4хDDR4-2933 МГц, TDP 165 Вт]",
+                        "Цена товара": 61199,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/1f11ecd3f3ab1b80/processor-intel-core-i9-10920x-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 9 3950X BOX [AM4, 16 x 3500 МГц, L2 - 8 МБ, L3 - 64 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 66599,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/4993baf093193332/processor-amd-ryzen-9-3950x-box/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10940X OEM [LGA 2066, 14 x 3300 МГц, L2 - 14 МБ, L3 - 19.25 МБ, 4хDDR4-2933 МГц, TDP 165 Вт]",
+                        "Цена товара": 68799,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/1d070190f3ac1b80/processor-intel-core-i9-10940x-oem/"
+            },
+            {
+                        "Название товара": "Процессор Intel Core i9-10940X BOX [LGA 2066, 14 x 3300 МГц, L2 - 14 МБ, L3 - 19.25 МБ, 4хDDR4-2933 МГц, TDP 165 Вт]",
+                        "Цена товара": 70999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/d0d58166f3ab1b80/processor-intel-core-i9-10940x-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 9 5950X BOX [AM4, 16 x 3400 МГц, L2 - 8 МБ, L3 - 64 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 82999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/e967a68e09e63332/processor-amd-ryzen-9-5950x-box/"
+            },
+            {
+                        "Название товара": "Процессор AMD Ryzen 9 5950X OEM [AM4, 16 x 3400 МГц, L2 - 8 МБ, L3 - 64 МБ, 2хDDR4-3200 МГц, TDP 105 Вт]",
+                        "Цена товара": 85999,
+                        "Ссылка на товар": "https://www.dns-shop.ru/product/1f9f21fd09e73332/processor-amd-ryzen-9-5950x-oem/"
             }
 ]

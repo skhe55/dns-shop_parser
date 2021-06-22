@@ -4,6 +4,7 @@ import pandas as pd
 import xlsxwriter
 import json
 import pickle
+import sqlite3
 
 def upload_to_json_file(d:list):
     with open("data.json", "w", encoding="utf-8") as file:
@@ -42,6 +43,27 @@ def upload_to_xlsx_file(d:list):
     writer.sheets['Page1'].set_column('B:B', 30)
     writer.sheets['Page1'].set_column('C:C', 110)
     writer.save()
+
+def upload_to_db_file(d:list, i):
+    try:
+        t_data = []
+        conn  = sqlite3.connect('data.db')
+        cursor = conn.cursor()
+        print("Connection succ")
+        cursor.execute("""CREATE TABLE IF NOT EXISTS product(name TEXT, price TEXT, link TEXT)""")
+        sql_insert_with_param = """INSERT INTO product
+                                (name, price, link)
+                                VALUES (?, ?, ?);"""
+        data_tuple = (d[i].get("Название товара"), d[i].get("Цена товара"), d[i].get("Ссылка на товар")) 
+        cursor.execute(sql_insert_with_param, data_tuple) 
+        conn.commit()
+        print("Insert succ")  
+    except sqlite3.Error as err:
+        print("ERR", err)
+    finally:
+        if conn:
+            conn.close()
+            print("Connection closed")
 
 def open_data(path:str):
         with open(path, 'rb') as f:

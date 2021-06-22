@@ -296,13 +296,13 @@ QLineEdit:focus {
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>650</x>
       <y>10</y>
       <width>77</width>
-      <height>81</height>
+      <height>82</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_4">
@@ -328,6 +328,28 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="push_csv">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(87, 150, 212);
+	border: none;
+	padding-top: 0px;
+	color: rgb(205, 231, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(95, 166,  232);
+}
+QPushButton:pressed {
+	background-color: rgb(0, 0, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Save in CSV</string>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
       <widget class="QPushButton" name="push_xlsx">
        <property name="styleSheet">
@@ -350,8 +372,8 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QPushButton" name="push_csv">
+     <item row="3" column="0">
+      <widget class="QPushButton" name="push_db">
        <property name="styleSheet">
         <string notr="true">QPushButton {
 	background-color: rgb(87, 150, 212);
@@ -368,7 +390,7 @@ QPushButton:pressed {
 }</string>
        </property>
        <property name="text">
-        <string>Save in CSV</string>
+        <string>Save in DB</string>
        </property>
       </widget>
      </item>
